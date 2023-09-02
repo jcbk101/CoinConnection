@@ -78,7 +78,7 @@ public class GameEngine
     //
     public static       boolean                  resumeGame;
     //
-    // Eache level holds 32-Bits.
+    // Each level holds 32-Bits.
     // (32 / 3 = 10.6) or 10 star segments per INTEGER with 2 bits remaining
     // to be used for the next star segment
     // 10 INTS x 32 BITS = 320. 320 / 3 bits for stars = 106.6 compressed (star) level bits
@@ -97,7 +97,7 @@ public class GameEngine
     public              ArrayList<ValueAnimator> animatorList;
     // Add a TAG to the class for whatever
     private static      Object                   tag;
-    // CRAP!!!!!!!!
+    // Sound API is !!!!!!!!
     public              PlaySound                soundPlayer;
     public static final int                      MAX_SFX_STREAMS        = 10;
     //
@@ -201,7 +201,7 @@ public class GameEngine
                 mInterstitialAd.setAdUnitId( "ca-app-pub-3940256099942544/1033173712" );
             }
             
-            //FIND A WAY TO SUPPORT INTERSTITIAL ADDS WITH A ONCLOSE LITTSENER
+            //FIND A WAY TO SUPPORT INTERSTITIAL ADS WITH A ONCLOSE LITTSENER
             
             // Use an activity context to get the rewarded video instance.
             mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance( context );
