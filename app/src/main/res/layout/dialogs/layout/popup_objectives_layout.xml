@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/objectiveParent"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:clickable = "true"
+        android:focusable = "true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/objFrame"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/container_goals_blue"
+            android:paddingTop = "@dimen/_15sdp"
+            android:paddingBottom = "@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".4">
+
+        <!--
+        //#############################
+        //
+        // Title: Objective
+        //
+        //#############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/objectiveHeader"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:contentDescription = "@null"
+                android:text="Goals"
+                android:textAllCaps="true"
+                android:fontFamily="@font/micross"
+                android:textColor="@color/goalHeaderText"
+                android:textSize="@dimen/_24ssp"
+                android:gravity="center"
+                app:strokeColor = "@color/goalHeaderStroke"
+                app:strokeWidth="@dimen/_2ssp"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintBottom_toTopOf="@id/objectiveMessage"
+                />
+
+
+        <!--
+        //#############################
+        //
+        // Message: Objective
+        //
+        //#############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/objectiveMessage"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "@dimen/_8sdp"
+                android:layout_marginBottom = "@dimen/_4sdp"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_horizontal"
+                android:textColor = "@color/goalHeaderText"
+                android:textSize = "@dimen/_12ssp"
+                android:visibility = "invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf = "@+id/goalsTable"
+                app:layout_constraintTop_toBottomOf = "@id/objectiveHeader"
+                app:strokeColor = "@color/goalHeaderStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                app:textAllCaps = "true"
+                tools:text = "@string/message_objective"
+                tools:visibility = "visible" />
+
+
+        <!--
+        //##############################
+        //
+        // Coin Objects
+        //
+        //##############################
+        -->
+        <TableLayout
+                android:id = "@+id/goalsTable"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "@dimen/_7sdp"
+                android:layout_marginBottom = "@dimen/_7sdp"
+                android:padding = "@dimen/_2sdp"
+                android:stretchColumns = "*"
+                app:layout_constraintBottom_toTopOf = "@id/targetHolderLayout"
+                app:layout_constraintTop_toBottomOf = "@id/objectiveMessage">
+
+
+            <TableRow>
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel1"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginBottom = "@dimen/_6sdp"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "Clear 3 Coins"
+                        tools:visibility = "visible" />
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel2"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginBottom = "@dimen/_6sdp"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "Clear 3 Coins"
+                        tools:visibility = "visible" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel3"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginBottom = "@dimen/_6sdp"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "complete in time allowed"
+                        tools:visibility = "visible" />
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel4"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginBottom = "@dimen/_6sdp"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "Clear 3 Coins"
+                        tools:visibility = "visible" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel5"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "Clear 3 Coins"
+                        tools:visibility = "visible" />
+
+                <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                        android:id = "@+id/goaLabel6"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:drawablePadding = "@dimen/_4sdp"
+                        android:fontFamily = "@font/badaga"
+                        android:gravity = "start|center_vertical"
+                        android:textAllCaps = "true"
+                        android:textColor = "@color/goalBodyText"
+                        android:textSize = "@dimen/_10sdp"
+                        android:visibility = "gone"
+                        app:drawableHeight = "@dimen/_12sdp"
+                        app:drawableStartCompat = "@drawable/list_a"
+                        app:drawableWidth = "@dimen/_12sdp"
+                        tools:text = "Clear 3 Coins"
+                        tools:visibility = "visible" />
+            </TableRow>
+        </TableLayout>
+
+
+        <!--
+        //#################################
+        //
+        // Target Coins
+        //
+        //#################################
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id = "@+id/targetHolderLayout"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "@dimen/_7sdp"
+                app:layout_constraintBottom_toTopOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/goalsTable">
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/redTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_red"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/greenTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2ssp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/greenTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_green"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/blueTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/redTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2ssp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/blueTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_blue"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/orangeTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/greenTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/orangeTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_orange"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/pinkTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/blueTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/pinkTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_pink"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/purpleTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/orangeTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/purpleTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_purple"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/yellowTargetObj"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/pinkTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/yellowTargetObj"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/dot_yellow"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/purpleGemTarget"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/purpleTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/purpleGemTarget"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/target_jewel_purple"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/pinkGemTarget"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/yellowTargetObj"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "2"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/pinkGemTarget"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/target_jewel_pink"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/tealGemTarget"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/purpleGemTarget"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/tealGemTarget"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/target_jewel_teal"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@+id/yellowGemTarget"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/pinkGemTarget"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/yellowGemTarget"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:background = "@drawable/target_jewel_yellow"
+                    android:fontFamily = "@font/micross"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_11ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintHorizontal_bias = "0.5"
+                    app:layout_constraintStart_toEndOf = "@+id/tealGemTarget"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "0"
+                    tools:visibility = "visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

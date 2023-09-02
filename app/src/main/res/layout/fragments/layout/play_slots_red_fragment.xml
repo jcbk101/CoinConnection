@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:clipChildren = "false">
+
+
+    <!--
+    //#################################
+    //
+    // BG
+    //
+    //#################################
+    -->
+    <ImageView
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:contentDescription = "@null"
+            android:scaleType = "centerCrop"
+            app:srcCompat = "@drawable/slot_background_red_long" />
+
+    <View
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:alpha = ".6"
+            android:background = "@drawable/slot_red_mask" />
+
+
+    <!--
+    //#################################
+    //
+    // Title Banner
+    //
+    //#################################
+    -->
+    <View
+            android:layout_width = "@dimen/_190sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/coin_connection_slot_title"
+            app:layout_constraintBottom_toTopOf = "@id/slotMachine"
+            app:layout_constraintDimensionRatio = "W,163:256"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+
+    <!--
+    //#######################################
+    //
+    // Slot machine components
+    //
+    //#######################################
+    -->
+    <!--
+        // Handle
+    -->
+    <ImageView
+            android:id = "@+id/reelArm"
+            android:layout_width = "@dimen/_76sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/red_arm_01"
+            android:clickable = "true"
+            android:contentDescription = "@null"
+            android:focusable = "true"
+            android:translationX = "@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf = "@id/slotMachine"
+            app:layout_constraintDimensionRatio = "W,232:98"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@id/slotMachine"
+            app:layout_constraintTop_toTopOf = "@id/slotMachine" />
+
+    <!--
+        // Main slot frame
+    -->
+    <View
+            android:id = "@+id/slotMachine"
+            android:layout_width = "@dimen/_200sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/red_off"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,361:256"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".6" />
+
+
+    <!--
+    //############################
+    //
+    // Reel views
+    //
+    //############################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width = "@dimen/_200sdp"
+            android:layout_height = "0dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,361:256"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".6">
+
+
+        <com.genesyseast.coinconnection.CustomControls.SlotReelView
+                android:id = "@+id/reel1"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "0dp"
+                app:layout_constraintBottom_toBottomOf = "@id/reelGlass1"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "@id/reelGlass1"
+                app:layout_constraintStart_toStartOf = "@id/reelGlass1"
+                app:layout_constraintTop_toTopOf = "@id/reelGlass1"
+                app:reelImage = "@drawable/slot_reel_red"
+                app:spinDirection = "up" />
+
+        <com.genesyseast.coinconnection.CustomControls.SlotReelView
+                android:id = "@+id/reel2"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "0dp"
+                app:layout_constraintBottom_toBottomOf = "@id/reelGlass2"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "@id/reelGlass2"
+                app:layout_constraintStart_toStartOf = "@id/reelGlass2"
+                app:layout_constraintTop_toTopOf = "@id/reelGlass2"
+                app:reelImage = "@drawable/slot_reel_red" />
+
+        <com.genesyseast.coinconnection.CustomControls.SlotReelView
+                android:id = "@+id/reel3"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "0dp"
+                app:layout_constraintBottom_toBottomOf = "@id/reelGlass3"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "@id/reelGlass3"
+                app:layout_constraintStart_toStartOf = "@id/reelGlass3"
+                app:layout_constraintTop_toTopOf = "@id/reelGlass3"
+                app:reelImage = "@drawable/slot_reel_red" />
+
+        <!--
+        //############################
+        //
+        // Windows for reels
+        //
+        //############################
+        -->
+        <ImageView
+                android:id = "@+id/reelGlass1"
+                android:layout_width = "@dimen/_50sdp"
+                android:layout_height = "0dp"
+                android:background = "@drawable/red_glass"
+                android:contentDescription = "@null"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".14"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+        <ImageView
+                android:id = "@+id/reelGlass2"
+                android:layout_width = "@dimen/_50sdp"
+                android:layout_height = "0dp"
+                android:background = "@drawable/red_glass"
+                android:contentDescription = "@null"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+        <ImageView
+                android:id = "@+id/reelGlass3"
+                android:layout_width = "@dimen/_50sdp"
+                android:layout_height = "0dp"
+                android:background = "@drawable/red_glass"
+                android:contentDescription = "@null"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "W,160:64"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".86"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+    //###########################
+    //
+    // Swiper animation
+    //
+    //###########################
+    -->
+
+    <ImageView
+            android:id = "@+id/swipeDownView"
+            android:layout_width = "@dimen/_51sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/swipe01"
+            android:contentDescription = "@null"
+            android:translationX = "@dimen/_10sdp"
+            android:translationY = "@dimen/_minus28sdp"
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toBottomOf = "@id/reelArm"
+            app:layout_constraintDimensionRatio = "W,304:98"
+            app:layout_constraintEnd_toEndOf = "@id/reelArm"
+            app:layout_constraintStart_toStartOf = "@id/reelArm"
+            app:layout_constraintTop_toTopOf = "@id/reelArm"
+            tools:visibility = "visible" />
+
+
+    <!--
+         //#############################
+         //
+         // Text Labels
+         //
+         //#############################
+     -->
+    <FrameLayout
+            android:id = "@+id/spinsLeftFrame"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:background = "#4F000000"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "@id/slotMachine"
+            app:layout_constraintStart_toStartOf = "@id/slotMachine">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center">
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/spinsLeftLabel"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "match_parent"
+                    android:fontFamily = "@font/micross"
+                    android:text = "@string/spins_left"
+                    android:textColor = "@color/popupTitleColor"
+                    android:textSize = "@dimen/_16ssp"
+                    android:textStyle = "bold"
+                    android:visibility = "visible"
+                    app:layout_constraintEnd_toStartOf = "@id/spinsLeftText"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:strokeColor = "@color/popupTitleStroke"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    app:textAllCaps = "true" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/spinsLeftText"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "match_parent"
+                    android:layout_toEndOf = "@id/spinsLeftLabel"
+                    android:fontFamily = "@font/micross"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_16ssp"
+                    android:textStyle = "bold"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toEndOf = "@id/spinsLeftLabel"
+                    app:strokeColor = "@color/popupTitleStroke"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = " 3 " />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+    <!--
+        //#############################
+        //
+        // All items won
+        //
+        //#############################
+    -->
+    <ImageView
+            android:id = "@+id/item1"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/button_square_red_a"
+            android:contentDescription = "@null"
+            android:padding = "@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf = "@id/spinsLeftFrame"
+            app:layout_constraintEnd_toStartOf = "@+id/item2"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toStartOf = "@id/slotMachine"
+            app:layout_constraintTop_toBottomOf = "@id/slotMachine"
+            tools:srcCompat = "@drawable/star_2_on" />
+
+
+    <ImageView
+            android:id = "@+id/item2"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/button_square_red_a"
+            android:contentDescription = "@null"
+            android:padding = "@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf = "@id/item1"
+            app:layout_constraintEnd_toStartOf = "@+id/item3"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@id/item1"
+            app:layout_constraintTop_toTopOf = "@id/item1" />
+
+
+    <ImageView
+            android:id = "@+id/item3"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/button_square_red_a"
+            android:contentDescription = "@null"
+            android:padding = "@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf = "@id/item1"
+            app:layout_constraintEnd_toEndOf = "@id/slotMachine"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@+id/item2"
+            app:layout_constraintTop_toTopOf = "@id/item1" />
+
+
+    <!--
+        //########################################
+        //
+        // You are a winner!
+        //
+        //########################################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/bigWinner"
+            android:layout_width = "match_parent"
+            android:layout_height = "@dimen/_100sdp"
+            android:background = "@drawable/edge_box_gold"
+            android:clipChildren = "false"
+            android:clipToPadding = "false"
+            android:paddingTop = "@dimen/_6sdp"
+            android:paddingBottom = "@dimen/_6sdp"
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".3"
+            tools:visibility = "visible">
+
+
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "#AF000000" />
+
+        <!--
+        //###############################
+        //
+        // Sparkle for item
+        //
+        //###############################
+        -->
+        <View
+                android:id = "@+id/spinningItemStar"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_64sdp"
+                android:background = "@drawable/small_star_burst"
+                android:scaleX = "1.7"
+                android:scaleY = "1.7"
+                android:visibility = "invisible"
+                app:layout_constraintBottom_toBottomOf = "@id/receivedItemImage"
+                app:layout_constraintEnd_toEndOf = "@id/receivedItemImage"
+                app:layout_constraintStart_toStartOf = "@id/receivedItemImage"
+                app:layout_constraintTop_toTopOf = "@id/receivedItemImage"
+                tools:visibility = "visible" />
+
+        <ImageView
+                android:id = "@+id/receivedItemImage"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_64sdp"
+                android:contentDescription = "@null"
+                android:visibility = "invisible"
+                app:layout_constraintBottom_toTopOf = "@id/receivedItemText"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                tools:srcCompat = "@drawable/coin_gold"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/receivedItemText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center_horizontal"
+                android:text = "@string/item_recieved"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_18ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/receivedItemImage"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_4sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+        //##################################
+        //
+        // Close button
+        //
+        //##################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/exitSlotsButton"
+            android:layout_width = "@dimen/_24sdp"
+            android:layout_height = "@dimen/_24sdp"
+            android:background = "@drawable/gold_x"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,162 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.genesyseast.coinconnection"
+        minSdkVersion 19
+        targetSdkVersion 29
+        multiDexEnabled true
+
+        versionCode 20      // Updated May 22nd, 2020: 9:30 p.m. [ RELEASED: 5/228/2020 9:40 p.m. ]
+        versionName "0.3.20"
+
+        // Support english only
+        resConfigs "en"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+
+        ndkVersion '21.3.6528147'
+
+        // Add the following 2 lines
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "versionName", "Current Version: " + variant.versionName
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+
+            aaptOptions {
+                cruncherEnabled = false
+            }
+
+            jniDebuggable false
+            renderscriptDebuggable false
+            zipAlignEnabled true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+/*
+                shrinkResources true
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+*/
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/drawable/TreasureChest',
+                            'src/main/res/drawable/SlotMachine',
+                            'src/main/res/drawable/OptionsMenu',
+                            'src/main/res/drawable/MainMenu',
+                            'src/main/res/drawable/HelpMenu',
+                            'src/main/res/drawable/Gui_Assets',
+                            'src/main/res/drawable/Backgrounds',
+                            //
+                            'src/main/res/drawable/Coins',
+                            'src/main/res/drawable/Coins/coin_shine',
+                            'src/main/res/drawable/Cards',
+                            'src/main/res/drawable/Cards/card_shine',
+                            //
+                            'src/main/res/drawable/Blockers',
+                            'src/main/res/drawable/Blockers/ice_parts',
+                            'src/main/res/drawable/Blockers/rock_parts',
+                            'src/main/res/drawable/Blockers/shell_parts',
+                            'src/main/res/drawable/Blockers/glass_parts',
+                            'src/main/res/drawable/Blockers/barrel_parts',
+                            'src/main/res/drawable/Gems',
+                            'src/main/res/drawable/Board_Specials',
+                            'src/main/res/drawable/Board_Icons_Bg',
+                            'src/main/res/drawable/General',
+                            'src/main/res/drawable/Levelselector',
+                            'src/main/res/drawable/GridMap',
+                            'src/main/res',
+
+                            /* Raw files*/
+                            'src/main/res/raw/music',
+                            'src/main/res/raw/soundeffects',
+
+                            /* Strictly for all buttons */
+                            'src/main/res/drawable/Gui_Assets/gui',
+                            'src/main/res/drawable/Gui_Assets/buttons',
+                            'src/main/res/drawable/Gui_Assets/icons',
+                            'src/main/res/drawable/Gui_Assets/Title',
+                            'src/main/res/drawable/Gui_Assets/boards',
+
+                            'src/main/res/layout/dialogs',
+                            'src/main/res/layout/fragments',
+                            'src/main/res/layout/general',
+                            'src/main/res/layout/levelselector',
+                    ]
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Motion Layout support
+    // TODO - NOTE: 'app:layout_constraintDimensionRatio' GETS BROKEN PAST THIS VERSION = 2.0.2!!!
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+//    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Support libraries
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.transition:transition:1.3.1'
+
+    // Scale all views with new value
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
+    // Add the Firebase Crashlytics dependency.
+    // (Recommended) Add the Google Analytics dependency.
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+
+    // Facebook
+    implementation 'com.facebook.android:facebook-share:5.15.3'
+
+    // Particles system
+    implementation 'com.plattysoft.leonids:LeonidsLib:1.3.2'
+
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "@dimen/_150sdp"
+        android:layout_height = "@dimen/_75sdp">
+
+
+    <ImageView
+            android:id="@+id/tipBackground"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:paddingBottom="@dimen/_18sdp"
+            app:srcCompat="@drawable/glow_yellow"
+            android:scaleType="fitXY"
+            android:background="@drawable/bubble_side_blue_a"
+            android:contentDescription = "@null" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/tipText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:gravity = "center_horizontal"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/micross"
+                android:textColor = "@color/goalHeaderText"
+                android:textSize = "@dimen/_12ssp"
+                android:textStyle = "bold"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                app:strokeWidth="@dimen/_3sdp"
+                app:strokeColor="@color/goalHeaderStroke"
+                tools:text = "I can help!" />
+
+        <TextView
+                android:id = "@+id/tipSubText"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/badaga"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:gravity = "center_horizontal"
+                android:textColor = "@color/colorRoadDark"
+                android:textSize = "@dimen/_13ssp"
+                android:textStyle = "bold"
+                android:maxLines="2"
+                android:layout_below="@id/tipText"
+                tools:text = "This is a three-step blocker. You should be aware." />
+
+</RelativeLayout>

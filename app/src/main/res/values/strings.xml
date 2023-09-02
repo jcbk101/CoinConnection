@@ -1,0 +1,187 @@
+<resources>
+
+    <!--
+    //############################
+    //
+    // Facebook
+    //
+    //############################
+    -->
+    <string name = "facebook_app_id">3094428400610028</string>
+    <string name = "fb_login_protocol_scheme">fb3094428400610028</string>
+
+
+    <!--
+    //##############################
+    //
+    // Level selector
+    //
+    //##############################
+    -->
+    <string name = "get_coins_text">Free Coins!</string>
+    <string name = "watch_ads_text">Watch Ad</string>
+    <string name = "reward_earned_text">Reward Earned</string>
+    <string name = "reward_text">"You received 2 coins"</string>
+    <string name = "bonus_text">Bonus</string>
+    <string name = "gift_text">Gift</string>
+    <string name = "settings_text">Settings</string>
+    <string name = "help_text">Help</string>
+    <string name = "home_text">Home</string>
+    <string name = "player_loc">player</string>
+
+
+    <!--
+    //############################
+    //
+    //
+    //
+    //############################
+    -->
+    <string name = "credits_header">Coin Connection: Credits</string>
+    <string name = "credits_footer">Touch to pause scrolling</string>
+    <string name = "app_name">Coin Connection</string>
+    <string name = "music_sound_off">Disable Music</string>
+    <string name = "sfx_sound_off">Disable Sound Effects</string>
+    <string name = "hint_system_off">Disable Hint System</string>
+    <string name = "match_counter_off">Disable Match Counter</string>
+
+
+    <!-- Title -->
+    <string name = "presents_text">Presents</string>
+
+    <!-- Main Menu data -->
+    <string name = "resume_button_text">Resume</string>
+    <string name = "play_button_text">Play game</string>
+    <string name = "settings_button_text">Settings</string>
+    <string name = "exit_button_text">Exit Game</string>
+    <string name = "back_button_text">Go Back</string>
+    <string name = "details_button_text">Level Details</string>
+    <string name = "clear_levels_button_text">Erase All Levels</string>
+    <string name = "about_text">About</string>
+    <string name = "booster_text">Boosters Upgrade</string>
+    <string name = "shuffle_text">Shuffle!</string>
+
+
+    <string name = "help_button_text">Help</string>
+    <string name = "enjoy_CC">Enjoying Coin Connection</string>
+    <string name = "button_done">Done</string>
+    <string name = "button_cancel">Cancel</string>
+    <string name = "button_confirm">Confirm</string>
+    <string name = "button_decline">Decline</string>
+    <string name = "button_no">No</string>
+
+    <string name = "biz_name">Genesys East</string>
+    <string name = "biz_name_2">Software Design</string>
+
+    <!--
+     //#################################
+     //
+     // Age verification
+     //
+     //#################################
+     -->
+    <string name = "age_verify">Please select your age so we can provide you with the best gaming experience.</string>
+    <string name = "age_privacy_link_text">
+        <![CDATA[In order To continue playing, you will need to confirm that you agree to this <a href = "https://sites.google.com/view/genesyseast-privacy-policy/home">Privacy Policy</a>. Thank you]]>.
+    </string>
+
+
+    <string name = "title_footer">Genesys East Software</string>
+
+    <!--
+    //#############################
+    //
+    // Game Pause
+    //
+    //#############################
+    -->
+    <string name = "resume_text">Resume</string>
+    <string name = "menu_text">Menu</string>
+    <string name = "quite_game_text">Quit</string>
+    <string name = "pause_game_text">Game Paused</string>
+
+    <string name = "bonus_time_text">+30</string>
+    <string name = "current_score_text">"Current Score: "</string>
+    <string name = "score_text">" Score: "</string>
+    <string name = "level_text">" Level: "</string>
+
+    <string name = "hi_score_text">High Score</string>
+    <string name = "moves_text">" Moves "</string>
+    <string name = "time_text">" Time "</string>
+    <string name = "time_is_up">Time\'s Up!</string>
+    <string name = "see_you_later">See You Later</string>
+
+    <string name = "booster_help">
+<!--
+        To place the booster on the board, select any coin on the board and it will be replaced by the new booster. If another booster is selected, it will be replaced by the new booster and the replaced booster will be returned to you.
+        If the replaced booster\'s slot is full, then it will be lost.\n\nClick the back button to cancel the booster process.\n\nClick a different booster to use it instead.
+-->
+        Select any coin on the board and it will be replaced. If another booster is chosen, it will be replaced and the replaced booster will be returned.
+        If the replaced booster is full, it will be lost.
+
+        <!--
+                <![CDATA[
+                To place the booster on the board, select any coin on the board and it will be replaced by the <font color = "#FFCC00">new booster</font>. If another booster is selected, it will be replaced by the new booster and the <font color = "#7F0000">replaced booster</font> will return to the booster holder.
+                If the <font color = "#7F0000">replaced booster</font>\'s holder is full, then it will be lost.]]>.
+        -->
+    </string>
+
+
+    <string name = "targetMessage">
+        When playing in penalty mode, matching of a target that has been met will result in
+        that target being active again. One coin will be added to that target.
+    </string>
+    <string name = "prize_header_text">"Level Rewards"</string>
+    <string name = "prize_msg_text">"Unlock prizes with stars earned!"</string>
+    <string name = "prize_claim_text">"Claim"</string>
+
+
+    <string name = "targets_text">Goals:</string>
+    <string name = "pause_text">Pause</string>
+
+    <string name = "spins_left">" Spins remaining: "</string>
+    <string name = "item_recieved">"Received a Power Item!"</string>
+    <string name = "free_spins">"Received 2 free spins!"</string>
+    <string name = "make_chest_choice">"Make your selection"</string>
+    <string name = "click_chest_start">"Click the button to start"</string>
+    <string name = "play_chests_button">"Start"</string>
+
+
+    <string name = "time_bonus_label">"Time Remaining: "</string>
+    <string name = "level_points_label">"Level Score: "</string>
+    <string name = "connect_label">"Connections: "</string>
+    <string name = "matches_label">Moves:</string>
+    <string name = "scroll_enabled">Scrolling Now Enabled</string>
+    <string name = "finish_text">Finish</string>
+    <string name = "none_text">None</string>
+
+    <!-- Rate System -->
+    <string name = "rate_yes">Yes</string>
+    <string name = "rate_remind">Remind Me</string>
+    <string name = "rate_no">No</string>
+    <string name = "rate_me_plea">
+        If you find Coin Connection enjoyable, please take a moment to rate it.
+        Thank you for your support!
+    </string>
+
+
+    <string name = "privacy_link_text">
+        <a href = "https://sites.google.com/view/genesyseast-privacy-policy/home">Privacy Policy</a>
+    </string>
+
+
+    <string name = "lorem_text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </string>
+
+    <string name = "anims_disabled">
+         This device currently has animations disabled. In order to use this app, animation support is required. Please enable device animations, and then restart the app. Thank you.
+    </string>
+
+    <string name = "level_completed">" Level Completed "</string>
+    <string name = "completed_text">Completed!</string>
+
+
+    <string name = "area_select">Select an area</string>
+    <string name = "game_completed">You have completed the game!</string>
+</resources>

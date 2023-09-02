@@ -1,0 +1,153 @@
+<resources>
+
+
+    <!--
+    //################################
+    //
+    // Coins
+    //
+    //################################
+    -->
+    <integer-array name = "coin_shine_list">
+        <item>@array/coin_red_shine</item>
+        <item>@array/coin_green_shine</item>
+        <item>@array/coin_blue_shine</item>
+        <!--        <item>@drawable/coin_purple</item>-->
+        <item>@array/coin_orange_shine</item>
+
+        <item>@array/coin_pink_shine</item>
+        <!--        <item>@drawable/coin_teal</item>-->
+        <item>@array/coin_purple_shine</item>
+        <item>@array/coin_gold_shine</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_pink_shine">
+        <item>@drawable/pink_shine_00</item>
+        <item>@drawable/pink_shine_01</item>
+        <item>@drawable/pink_shine_02</item>
+        <item>@drawable/pink_shine_03</item>
+        <item>@drawable/pink_shine_04</item>
+        <item>@drawable/pink_shine_05</item>
+        <item>@drawable/pink_shine_06</item>
+        <item>@drawable/pink_shine_07</item>
+    </integer-array>
+
+    <integer-array name = "coin_purple_shine">
+        <item>@drawable/purple_shine_00</item>
+        <item>@drawable/purple_shine_01</item>
+        <item>@drawable/purple_shine_02</item>
+        <item>@drawable/purple_shine_03</item>
+        <item>@drawable/purple_shine_04</item>
+        <item>@drawable/purple_shine_05</item>
+        <item>@drawable/purple_shine_06</item>
+        <item>@drawable/purple_shine_07</item>
+    </integer-array>
+
+    <integer-array name = "coin_red_shine">
+        <item>@drawable/red_shine_00</item>
+        <item>@drawable/red_shine_01</item>
+        <item>@drawable/red_shine_02</item>
+        <item>@drawable/red_shine_03</item>
+        <item>@drawable/red_shine_04</item>
+        <item>@drawable/red_shine_05</item>
+        <item>@drawable/red_shine_06</item>
+        <item>@drawable/red_shine_07</item>
+    </integer-array>
+
+    <integer-array name = "coin_teal_shine">
+        <item>@drawable/teal_shine_00</item>
+        <item>@drawable/teal_shine_01</item>
+        <item>@drawable/teal_shine_02</item>
+        <item>@drawable/teal_shine_03</item>
+        <item>@drawable/teal_shine_04</item>
+        <item>@drawable/teal_shine_05</item>
+        <item>@drawable/teal_shine_06</item>
+        <item>@drawable/teal_shine_07</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_green_shine">
+        <item>@drawable/green_shine_00</item>
+        <item>@drawable/green_shine_01</item>
+        <item>@drawable/green_shine_02</item>
+        <item>@drawable/green_shine_03</item>
+        <item>@drawable/green_shine_04</item>
+        <item>@drawable/green_shine_05</item>
+        <item>@drawable/green_shine_06</item>
+        <item>@drawable/green_shine_07</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_blue_shine">
+        <item>@drawable/blue_shine_00</item>
+        <item>@drawable/blue_shine_01</item>
+        <item>@drawable/blue_shine_02</item>
+        <item>@drawable/blue_shine_03</item>
+        <item>@drawable/blue_shine_04</item>
+        <item>@drawable/blue_shine_05</item>
+        <item>@drawable/blue_shine_06</item>
+        <item>@drawable/blue_shine_07</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_orange_shine">
+        <item>@drawable/orange_shine_00</item>
+        <item>@drawable/orange_shine_01</item>
+        <item>@drawable/orange_shine_02</item>
+        <item>@drawable/orange_shine_03</item>
+        <item>@drawable/orange_shine_04</item>
+        <item>@drawable/orange_shine_05</item>
+        <item>@drawable/orange_shine_06</item>
+        <item>@drawable/orange_shine_07</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_gold_shine">
+        <item>@drawable/gold_shine_00</item>
+        <item>@drawable/gold_shine_01</item>
+        <item>@drawable/gold_shine_02</item>
+        <item>@drawable/gold_shine_03</item>
+        <item>@drawable/gold_shine_04</item>
+        <item>@drawable/gold_shine_05</item>
+        <item>@drawable/gold_shine_06</item>
+        <item>@drawable/gold_shine_07</item>
+    </integer-array>
+
+
+    <!--
+    //################################
+    //
+    // Cards
+    //
+    //################################
+    -->
+    <integer-array name = "card_shine_list">
+        <item>@array/card_questionmark</item>
+        <item>@array/card_back</item>
+    </integer-array>
+
+    <integer-array name = "card_questionmark">
+        <item>@drawable/card_quesionmark_shine_00</item>
+        <item>@drawable/card_quesionmark_shine_01</item>
+        <item>@drawable/card_quesionmark_shine_02</item>
+        <item>@drawable/card_quesionmark_shine_03</item>
+        <item>@drawable/card_quesionmark_shine_04</item>
+        <item>@drawable/card_quesionmark_shine_05</item>
+        <item>@drawable/card_quesionmark_shine_06</item>
+        <item>@drawable/card_quesionmark_shine_07</item>
+    </integer-array>
+
+
+    <integer-array name = "card_back">
+        <item>@drawable/card_back_shine_00</item>
+        <item>@drawable/card_back_shine_01</item>
+        <item>@drawable/card_back_shine_02</item>
+        <item>@drawable/card_back_shine_03</item>
+        <item>@drawable/card_back_shine_04</item>
+        <item>@drawable/card_back_shine_05</item>
+        <item>@drawable/card_back_shine_06</item>
+        <item>@drawable/card_back_shine_07</item>
+    </integer-array>
+
+</resources>

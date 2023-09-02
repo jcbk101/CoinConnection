@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:clipChildren = "false">
+
+
+    <!--
+    //#################################
+    //
+    // BG
+    //
+    //#################################
+    -->
+    <ImageView
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:contentDescription = "@null"
+            android:scaleType = "centerCrop"
+            app:srcCompat = "@drawable/slot_background_red_long" />
+
+    <View
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:alpha = ".95"
+            android:background = "@drawable/slot_red_mask" />
+
+    <View
+            android:layout_width = "match_parent"
+            android:layout_height = "0dp"
+            android:alpha = ".75"
+            android:background = "@drawable/outline_connected"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,518:480" />
+
+    <!--
+    //#################################
+    //
+    // Title Banner
+    //
+    //#################################
+    -->
+    <View
+            android:layout_width = "@dimen/_190sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/coin_connection_slot_title"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,163:256"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".05" />
+
+
+    <!--
+    //###############################
+    //
+    // Item Won Frames
+    //
+    //###############################
+    -->
+    <ImageView
+            android:id = "@+id/item1"
+            android:layout_width = "@dimen/_50sdp"
+            android:layout_height = "@dimen/_50sdp"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "@id/chest1"
+            app:layout_constraintEnd_toEndOf = "@id/chest1"
+            app:layout_constraintStart_toStartOf = "@id/chest1"
+            app:layout_constraintTop_toTopOf = "@id/chest1"
+            tools:srcCompat = "@drawable/coin_gold"
+            tools:translationY = "@dimen/_minus30sdp" />
+
+
+    <ImageView
+            android:id = "@+id/item2"
+            android:layout_width = "@dimen/_50sdp"
+            android:layout_height = "@dimen/_50sdp"
+            android:clipChildren = "false"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "@id/chest2"
+            app:layout_constraintEnd_toEndOf = "@id/chest2"
+            app:layout_constraintStart_toStartOf = "@id/chest2"
+            app:layout_constraintTop_toTopOf = "@id/chest2"
+            tools:srcCompat = "@drawable/bomb_on"
+            tools:translationY = "@dimen/_minus60sdp" />
+
+
+    <ImageView
+            android:id = "@+id/item3"
+            android:layout_width = "@dimen/_50sdp"
+            android:layout_height = "@dimen/_50sdp"
+            android:clipChildren = "false"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "@id/chest3"
+            app:layout_constraintEnd_toEndOf = "@id/chest3"
+            app:layout_constraintStart_toStartOf = "@id/chest3"
+            app:layout_constraintTop_toTopOf = "@id/chest3"
+            tools:srcCompat = "@drawable/star_2_on"
+            tools:translationY = "@dimen/_minus40sdp" />
+
+
+    <!--
+    //###############################
+    //
+    // Item Received text
+    //
+    //###############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/receivedItemText"
+            android:layout_width = "match_parent"
+            android:layout_height = "0dp"
+            android:background = "@drawable/edge_box_gold"
+            android:fontFamily = "@font/micross"
+            android:gravity = "center"
+            android:text = "@string/make_chest_choice"
+            android:textColor = "@color/popupTitleColor"
+            android:textSize = "@dimen/_18ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,1:8"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".9"
+            app:strokeColor = "@color/popupTitleStroke"
+            app:strokeWidth = "@dimen/_4sdp" />
+
+
+    <!--
+        //############################
+        //
+        // Chest #1
+        //
+        //############################
+    -->
+    <View
+            android:id = "@id/chestBurst1"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "@dimen/_45sdp"
+            android:background = "@drawable/small_half_star_burst"
+            android:scaleX = "1.2"
+            android:scaleY = "1.2"
+            android:translationY = "@dimen/_minus6sdp"
+            android:visibility = "invisible"
+            app:layout_constraintEnd_toEndOf = "@id/chest1"
+            app:layout_constraintStart_toStartOf = "@id/chest1"
+            app:layout_constraintTop_toTopOf = "@id/chest1"
+            tools:visibility = "visible" />
+
+    <ImageView
+            android:id = "@+id/chest1"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "0dp"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,237:256"
+            app:layout_constraintEnd_toStartOf = "@id/chest2"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:srcCompat = "@drawable/chest_orange_1"
+            tools:srcCompat = "@drawable/chest_orange_5" />
+
+    <!--
+        //############################
+        //
+        // Chest #2
+        //
+        //############################
+    -->
+    <View
+            android:id = "@+id/chestBurst2"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "@dimen/_45sdp"
+            android:background = "@drawable/small_half_star_burst"
+            android:scaleX = "1.2"
+            android:scaleY = "1.2"
+            android:translationY = "@dimen/_minus6sdp"
+            android:visibility = "invisible"
+            app:layout_constraintEnd_toEndOf = "@id/chest2"
+            app:layout_constraintStart_toStartOf = "@id/chest2"
+            app:layout_constraintTop_toTopOf = "@id/chest2"
+            tools:visibility = "visible" />
+
+    <ImageView
+            android:id = "@+id/chest2"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "0dp"
+            app:srcCompat = "@drawable/chest_orange_1"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,237:256"
+            app:layout_constraintEnd_toStartOf = "@id/chest3"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toEndOf = "@id/chest1"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+
+    <!--
+        //############################
+        //
+        // Chest #3
+        //
+        //############################
+    -->
+    <View
+            android:id = "@+id/chestBurst3"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "@dimen/_45sdp"
+            android:background = "@drawable/small_half_star_burst"
+            android:scaleX = "1.2"
+            android:scaleY = "1.2"
+            android:translationY = "@dimen/_minus6sdp"
+            android:visibility = "invisible"
+            app:layout_constraintEnd_toEndOf = "@id/chest3"
+            app:layout_constraintStart_toStartOf = "@id/chest3"
+            app:layout_constraintTop_toTopOf = "@id/chest3"
+            tools:visibility = "visible" />
+
+    <ImageView
+            android:id = "@+id/chest3"
+            android:layout_width = "@dimen/_90sdp"
+            android:layout_height = "0dp"
+            app:srcCompat = "@drawable/chest_orange_1"
+            android:contentDescription = "@null"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,237:256"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toEndOf = "@id/chest2"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+    <!--
+        //##################################
+        //
+        // Close button
+        //
+        //##################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/exitChestButton"
+            android:layout_width = "@dimen/_24sdp"
+            android:layout_height = "@dimen/_24sdp"
+            android:background = "@drawable/gold_x"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

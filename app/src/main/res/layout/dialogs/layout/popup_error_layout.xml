@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+
+    <!--
+    //#############################
+    //
+    // Main box
+    //
+    //#############################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/errorWindow"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:background = "#BF000000"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <!--
+        //##############################
+        //
+        // Borders
+        //
+        //##############################
+        -->
+        <View
+                android:id = "@+id/topBorder"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf = "parent" />
+
+
+        <View
+                android:id = "@+id/bottomBorder"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_3sdp"
+
+                app:layout_constraintBottom_toBottomOf = "parent" />
+
+        <!--
+        //###############################
+        //
+        // Header: Icon
+        //
+        //###############################
+        -->
+        <ImageView
+                android:id = "@+id/msgIcon"
+                android:layout_width = "@dimen/_28sdp"
+                android:layout_height = "@dimen/_28sdp"
+                android:layout_margin = "@dimen/_4sdp"
+                android:layout_marginStart = "@dimen/_2sdp"
+                app:layout_constraintBottom_toTopOf = "@id/titleDivider"
+                app:layout_constraintEnd_toStartOf = "@id/msgTitle"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/topBorder"
+                app:srcCompat = "@android:drawable/ic_dialog_alert" />
+
+        <!--
+        //#############################
+        //
+        // Header: Title
+        //
+        //#############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/msgTitle"
+                android:layout_width = "0dp"
+                android:layout_height = "0dp"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center_vertical"
+                android:maxLines = "1"
+                android:paddingStart = "@dimen/_4sdp"
+                android:paddingEnd = "@dimen/_4sdp"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_19ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@id/msgIcon"
+                app:layout_constraintEnd_toStartOf = "@id/msgClose"
+                app:layout_constraintStart_toEndOf = "@id/msgIcon"
+                app:layout_constraintTop_toTopOf = "@id/msgIcon"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:text = "Error" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/msgClose"
+                android:layout_width = "@dimen/_20sdp"
+                android:layout_height = "@dimen/_20sdp"
+                android:layout_marginEnd = "@dimen/_2sdp"
+                android:background = "@drawable/gold_x"
+                android:contentDescription = "@null"
+                android:visibility = "invisible"
+                app:isButton = "true"
+                app:layout_constraintBottom_toTopOf = "@id/titleDivider"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@id/msgTitle"
+                app:layout_constraintTop_toTopOf = "parent"
+                tools:visibility = "visible" />
+
+
+        <View
+                android:id = "@+id/titleDivider"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_1sdp"
+
+                app:layout_constraintTop_toBottomOf = "@id/msgTitle"
+                app:layout_constraintVertical_bias = ".25" />
+
+        <!--
+        //#############################
+        //
+        // Message
+        //
+        //#############################
+        -->
+        <!--tools:text = "This is a stupid ass error message test. This is a stupid ass error message test"-->
+
+
+        <!--
+        //##############################
+        //
+        // Main buttons
+        //
+        //##############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/msgText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "@dimen/_4sdp"
+                android:layout_marginBottom = "@dimen/_4sdp"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/titleDivider"
+                app:layout_constraintVertical_bias = "0.0"
+                app:strokeColor = "#FF00007F"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:text = "This is a stupid ass test. Do the dumb ass test you piece of dog feces! Don't bother me anymore with your nonsense either!" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/errorButtonCancel"
+                android:layout_width = "wrap_content"
+                android:layout_height = "@dimen/_30sdp"
+                android:layout_marginTop = "@dimen/_3sdp"
+                android:layout_marginEnd = "@dimen/_4sdp"
+                android:layout_marginBottom = "@dimen/_8sdp"
+                android:background = "@drawable/button_long_orange_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_4sdp"
+                android:text = "@string/button_cancel"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_15ssp"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/errorButtonNo"
+                app:layout_constraintTop_toBottomOf = "@id/msgText"
+                app:layout_constraintVertical_bias = "1"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "This is a test" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/errorButtonNo"
+                android:layout_width = "wrap_content"
+                android:layout_height = "@dimen/_30sdp"
+                android:layout_marginTop = "@dimen/_3sdp"
+                android:layout_marginEnd = "@dimen/_4sdp"
+                android:layout_marginBottom = "@dimen/_8sdp"
+                android:background = "@drawable/button_long_red_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_4sdp"
+                android:text = "@string/button_no"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_15ssp"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/errorButtonDone"
+                app:layout_constraintTop_toBottomOf = "@id/msgText"
+                app:layout_constraintVertical_bias = "1"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/errorButtonDone"
+                android:layout_width = "wrap_content"
+                android:layout_height = "@dimen/_30sdp"
+                android:layout_marginTop = "@dimen/_3sdp"
+                android:layout_marginEnd = "@dimen/_4sdp"
+                android:layout_marginBottom = "@dimen/_8sdp"
+                android:background = "@drawable/button_long_blue_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_4sdp"
+                android:shadowColor = "@android:color/black"
+                android:text = "@string/button_done"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_15ssp"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/msgText"
+                app:layout_constraintVertical_bias = "1"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <ImageView
+                android:id = "@+id/coinFace"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_64sdp"
+                android:layout_margin = "@dimen/_3sdp"
+                android:scaleType = "fitCenter"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/msgText"
+                app:srcCompat = "@drawable/happy_face_emoji"
+                tools:visibility = "visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

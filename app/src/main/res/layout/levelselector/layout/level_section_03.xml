@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/levelContainer"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:clipChildren = "false">
+
+    <!--
+    //#########################
+    //
+    // Levels to load
+    //
+    //#########################
+    -->
+    <TextView
+            android:id = "@+id/boardImage"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:background = "@drawable/level_map_03"
+            tools:backgroundTint = "@color/colorRoad" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot1"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.967"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot2"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.104"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.882"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot3"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.638"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.823"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot4"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.569"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.677"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot5"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.104"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.612"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot6"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.346"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.528"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot7"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.704"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.461"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot8"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.387"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.387"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot9"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.0"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.316"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot10"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.31"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.171"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+
+    <!--
+    //################################
+    //
+    // Player Image
+    //
+    //################################
+    -->
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot11"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.738"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.129"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/levelSlot12"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/dot_gray"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+
+
+            android:padding = "@dimen/_2sdp"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.968"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.018"
+
+            app:srcCompatPadding = "@dimen/_3sdp"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/prizeClaim"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/gift_box_orange"
+            android:translationY = "@dimen/_minus4sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.613"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.0" />
+
+    <RelativeLayout
+            android:id = "@+id/playerContainer"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_60sdp"
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toTopOf = "@id/levelSlot1"
+            app:layout_constraintEnd_toEndOf = "@id/levelSlot1"
+            app:layout_constraintStart_toStartOf = "@id/levelSlot1"
+            tools:visibility = "visible">
+
+        <!--
+        //#############################
+        //
+        // Masking color
+        //
+        //#############################
+        -->
+        <ImageView
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+                android:background = "@drawable/button_square_mask"
+                app:backgroundTint = "#ffa72fa7" />
+
+        <ImageView
+                android:id = "@+id/playerImage"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+                android:background = "@drawable/button_square"
+                android:contentDescription = "@null"
+                android:fontFamily = "@font/badaga"
+                android:padding = "@dimen/_5sdp"
+                android:textStyle = "bold"
+                app:srcCompat = "@drawable/blank_avatar" />
+
+        <ImageView
+                android:layout_width = "@dimen/_12sdp"
+                android:layout_height = "@dimen/_12sdp"
+                android:layout_below = "@id/playerImage"
+                android:layout_centerHorizontal = "true"
+                android:background = "@drawable/player_face_pointer"
+                android:contentDescription = "@null"
+                android:padding = "@dimen/_2sdp"
+                app:tint = "#ffa72fa7"
+                android:translationY = "@dimen/_minus2sdp"
+                app:backgroundTint = "#FF000000"
+                app:srcCompat = "@drawable/player_face_pointer" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

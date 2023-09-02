@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer-array name = "bomb_explode">
+        <item>@drawable/bomb_explode_1</item>
+        <item>@drawable/bomb_explode_2</item>
+        <item>@drawable/bomb_explode_3</item>
+        <item>@drawable/bomb_explode_4</item>
+        <item>@drawable/bomb_explode_5</item>
+        <item>@drawable/bomb_explode_6</item>
+        <item>@drawable/bomb_explode_7</item>
+        <item>@drawable/bomb_explode_8</item>
+        <item>@drawable/bomb_explode_9</item>
+    </integer-array>
+
+
+    <integer-array name = "bomb_sparkle">
+        <item>@drawable/bomb_sparkle_1</item>
+        <item>@drawable/bomb_sparkle_2</item>
+        <item>@drawable/bomb_sparkle_3</item>
+        <item>@drawable/bomb_sparkle_4</item>
+    </integer-array>
+
+
+    <integer-array name = "coin_beam">
+        <item>@drawable/coin_beam_1</item>
+        <item>@drawable/coin_beam_2</item>
+        <item>@drawable/coin_beam_3</item>
+
+        <item>@drawable/coin_beam_4</item>
+        <item>@drawable/coin_beam_5</item>
+        <item>@drawable/coin_beam_6</item>
+        <item>@drawable/coin_beam_7</item>
+
+        <item>@drawable/coin_beam_4</item>
+        <item>@drawable/coin_beam_5</item>
+        <item>@drawable/coin_beam_6</item>
+        <item>@drawable/coin_beam_7</item>
+
+        <item>@drawable/coin_beam_4</item>
+        <item>@drawable/coin_beam_5</item>
+        <item>@drawable/coin_beam_6</item>
+        <item>@drawable/coin_beam_7</item>
+
+        <item>@drawable/coin_beam_8</item>
+        <item>@drawable/coin_beam_9</item>
+        <item>@drawable/coin_beam_10</item>
+        <item>@drawable/coin_beam_11</item>
+    </integer-array>
+
+
+</resources>

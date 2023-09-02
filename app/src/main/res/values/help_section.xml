@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+//#############################
+//
+// Coin grids for help section
+//
+//#############################
+-->
+    <!-- Make a match -->
+    <string name = "grid_text_1">
+        Swipe matching coins, adjacent or diagonally aligned, in groups of three or more.
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_1">
+        <item>0,5,9,5</item>
+    </string>
+
+    <string-array name = "grid_1">
+        <item>0,2,1,0</item>
+        <item>1,0,3,4</item>
+        <item>4,0,1,0</item>
+        <item>2,3,1,3</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //  Get a clock
+    //########################
+     -->
+
+    <string name = "grid_text_2">
+        Matching five coins will add 30 seconds to the timer. This takes effect once the clock drops below 45 seconds.
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_2">
+        <item>0,4,5,9,10,9</item>
+    </string>
+
+    <string-array name = "grid_2">
+        <item>4,0,1,3</item>
+        <item>4,4,3,2</item>
+        <item>0,4,4,0</item>
+        <item>2,3,1,5</item>
+    </string-array>
+
+    <!--
+     //########################
+     // Get a booster
+     //########################
+     -->
+    <string name = "grid_text_3">
+        Matching six or more coins creates a booster. Bigger matches make better boosters. If the timer drops below 45 seconds, certain boosters will affect more coins.
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_3">
+        <item>1,2,6,11,14,13,8, 13</item>
+    </string>
+
+    <string-array name = "grid_3">
+        <item>1,6,6,3</item>
+        <item>3,0,6,4</item>
+        <item>6,3,0,6</item>
+        <item>2,6,6,5</item>
+    </string-array>
+
+
+    <!--
+     //########################
+     // Use a booster
+     //########################
+     -->
+    <string name = "grid_text_4">
+        To use a Booster / Special Item, swipe in any direction to make a connection with another coin.
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_4">
+        <item>10,6,10</item>
+    </string>
+
+    <string-array name = "grid_4">
+        <item>1,3,2,4</item>
+        <item>5,4,6,0</item>
+        <item>3,0,8,1</item>
+        <item>5,1,6,2</item>
+    </string-array>
+
+
+    <!--
+     //########################
+     // Chain connection booster
+     //########################
+     -->
+    <string name = "grid_text_5">
+        Some boosters can cause a chain reaction on the Bomb booster. This can be useful on coins that are not close enough together to make a normal connection.
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_5">
+        <item>11,10,11</item>
+    </string>
+
+    <string-array name = "grid_5">
+        <item>3,1,0,4</item>
+        <item>6,4,6,5</item>
+        <item>3,8,0,10</item>
+        <item>6,1,6,2</item>
+    </string-array>
+
+
+    <!--
+     //########################
+     // Chain connection booster
+     //########################
+     -->
+    <string name = "grid_text_6">
+        Try to save Boosters for higher levels in an Area. Once an Area is completed, Boosters will be reset to ONE. As Levels get harder, Boosters become a more important tool!
+    </string>
+    <!-- Script for this section -->
+    <string name = "grid_script_6">
+        <item>2,2,7,7,-7,-2,908,9,9,6,6,9,9</item>
+    </string>
+
+    <string-array name = "grid_6">
+        <item>1,2,3,4</item>
+        <item>3,4,5,3</item>
+        <item>5,6,0,1</item>
+        <item>3,4,5,6</item>
+    </string-array>
+
+</resources>

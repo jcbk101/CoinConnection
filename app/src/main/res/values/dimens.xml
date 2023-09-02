@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name = "SPRING_SLIDE_TIME">600</integer>
+    <integer name = "SLIDE_TIME">300</integer>
+    <integer name = "FADE_TIME">350</integer>
+
+    <dimen name = "CARD_SIZE">@dimen/_35sdp</dimen>
+
+    <dimen name = "TILE_SIZE">@dimen/_40sdp</dimen>
+    <dimen name = "HALF_TILE_SIZE">@dimen/_20sdp</dimen>
+    <dimen name = "GRID_WIDTH">@dimen/_280sdp</dimen>
+    <dimen name = "GRID_HEIGHT">@dimen/_280sdp</dimen>
+
+    <dimen name = "BOARD_WIDTH">@dimen/_360sdp</dimen>
+    <dimen name = "BOARD_HEIGHT">@dimen/_360sdp</dimen>
+
+
+<!--
+    <dimen name = "TILE_SIZE">@dimen/_36sdp</dimen>
+    <dimen name = "GRID_WIDTH">@dimen/_252sdp</dimen>
+    <dimen name = "GRID_HEIGHT">@dimen/_252sdp</dimen>
+
+    <dimen name = "BOARD_WIDTH">@dimen/_324sdp</dimen>
+    <dimen name = "BOARD_HEIGHT">@dimen/_324sdp</dimen>
+-->
+
+
+    <dimen name = "FRAME_HEIGHT">@dimen/_380sdp</dimen>
+    <dimen name = "FRAME_WIDTH">@dimen/_280sdp</dimen>
+    <dimen name = "FRAME_PAD_TOP">@dimen/_24sdp</dimen>
+
+<!--
+    <dimen name = "FRAME_HEIGHT">@dimen/_380sdp</dimen>
+    <dimen name = "FRAME_WIDTH">@dimen/_288sdp</dimen>
+    <dimen name = "FRAME_PAD_TOP">@dimen/_24sdp</dimen>
+-->
+
+</resources>

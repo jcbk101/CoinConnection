@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android = "http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked = "true">
+        <layer-list android:paddingStart = "@dimen/_2sdp" android:paddingTop = "@dimen/_2sdp" android:paddingEnd = "@dimen/_2sdp" android:paddingBottom = "@dimen/_2sdp">
+            <item android:drawable = "@drawable/button_outline_red_a" />
+            <item android:drawable = "@drawable/white_checkmark" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:drawable = "@drawable/button_outline_red_a" />
+        </layer-list>
+    </item>
+
+
+</selector>

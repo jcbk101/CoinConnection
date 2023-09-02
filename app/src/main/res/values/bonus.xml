@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    //#############################
+    //
+    // Purple Chest
+    //
+    //#############################
+    -->
+    <integer-array name = "purple_chest">
+        <item>@drawable/chest_purple_1</item>
+        <item>@drawable/chest_purple_2</item>
+        <item>@drawable/chest_purple_3</item>
+        <item>@drawable/chest_purple_4</item>
+        <item>@drawable/chest_purple_5</item>
+    </integer-array>
+
+
+    <!--
+    //#############################
+    //
+    // Purple Gift Box
+    //
+    //#############################
+    -->
+    <integer-array name = "purple_gift">
+        <item>@drawable/gift_box_purple_01</item>
+        <item>@drawable/gift_box_purple_02</item>
+        <item>@drawable/gift_box_purple_03</item>
+        <item>@drawable/gift_box_purple_04</item>
+        <item>@drawable/gift_box_purple_05</item>
+        <item>@drawable/gift_box_purple_06</item>
+        <item>@drawable/gift_box_purple_07</item>
+        <item>@drawable/gift_box_purple_08</item>
+    </integer-array>
+
+
+
+    <!--
+    //#############################
+    //
+    // Red Chest
+    //
+    //#############################
+    -->
+    <integer-array name = "red_chest">
+        <item>@drawable/chest_red_1</item>
+        <item>@drawable/chest_red_2</item>
+        <item>@drawable/chest_red_3</item>
+        <item>@drawable/chest_red_4</item>
+        <item>@drawable/chest_red_5</item>
+    </integer-array>
+
+
+    <!--
+    //#############################
+    //
+    // Red Chest
+    //
+    //#############################
+    -->
+    <integer-array name = "orange_chest">
+        <item>@drawable/chest_orange_1</item>
+        <item>@drawable/chest_orange_2</item>
+        <item>@drawable/chest_orange_3</item>
+        <item>@drawable/chest_orange_4</item>
+        <item>@drawable/chest_orange_5</item>
+    </integer-array>
+
+    <!--
+    //#############################
+    //
+    // Red Reel Arm
+    //
+    //#############################
+    -->
+    <integer-array name = "red_reel_arm">
+        <item>@drawable/red_arm_01</item>
+        <item>@drawable/red_arm_02</item>
+        <item>@drawable/red_arm_03</item>
+        <item>@drawable/red_arm_04</item>
+        <item>@drawable/red_arm_05</item>
+        <item>@drawable/red_arm_06</item>
+        <item>@drawable/red_arm_07</item>
+    </integer-array>
+
+
+    <!--
+    //#############################
+    //
+    // Purple Reel Arm
+    //
+    //#############################
+    -->
+    <integer-array name = "purple_reel_arm">
+        <item>@drawable/purple_arm_01</item>
+        <item>@drawable/purple_arm_02</item>
+        <item>@drawable/purple_arm_03</item>
+        <item>@drawable/purple_arm_04</item>
+        <item>@drawable/purple_arm_05</item>
+        <item>@drawable/purple_arm_06</item>
+        <item>@drawable/purple_arm_07</item>
+    </integer-array>
+
+
+    <!--
+    //#############################
+    //
+    // Swiping animation
+    //
+    //#############################
+    -->
+    <integer-array name = "do_swipe">
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe02</item>
+        <item>@drawable/swipe03</item>
+        <item>@drawable/swipe04</item>
+        <item>@drawable/swipe05</item>
+        <item>@drawable/swipe06</item>
+        <item>@drawable/swipe07</item>
+        <item>@drawable/swipe08</item>
+        <item>@drawable/swipe09</item>
+        <item>@drawable/swipe10</item>
+        <item>@drawable/swipe11</item>
+        <item>@drawable/swipe12</item>
+        <item>@drawable/swipe13</item>
+        <item>@drawable/swipe14</item>
+
+        <item>@drawable/swipe15</item>
+        <item>@drawable/swipe15</item>
+        <item>@drawable/swipe15</item>
+
+        <!-- Back upward  -->
+        <item>@drawable/swipe16</item>
+        <item>@drawable/swipe17</item>
+        <item>@drawable/swipe18</item>
+        <item>@drawable/swipe19</item>
+        <item>@drawable/swipe20</item>
+        <item>@drawable/swipe21</item>
+        <item>@drawable/swipe22</item>
+        <item>@drawable/swipe23</item>
+
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+        <item>@drawable/swipe01</item>
+    </integer-array>
+
+</resources>

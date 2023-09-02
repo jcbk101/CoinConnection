@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/fragment_container"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@android:color/black"
+        android:clipChildren = "false"
+        android:orientation = "vertical">
+
+
+    <!--
+    //########################
+    //
+    // Main logo
+    //
+    //########################
+    -->
+    <View
+            android:id = "@+id/logoBg"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:background = "@drawable/genesys_east"
+            tools:alpha = "1" />
+
+    <View
+            android:id = "@+id/logoStar"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:background = "@drawable/sparkle"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.787"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.448" />
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/presenstText"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "@string/presents_text"
+            android:textColor = "@android:color/white"
+            android:textSize = "@dimen/_28ssp"
+            android:textStyle = "bold"
+            android:visibility = "visible"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".6"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_4sdp"
+            app:textAllCaps = "true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

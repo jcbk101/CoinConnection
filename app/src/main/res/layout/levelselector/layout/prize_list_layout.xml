@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/prizeContainer"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_margin = "@dimen/_2sdp"
+        android:background = "@drawable/long_box_orange"
+        android:clipChildren = "false"
+        android:padding = "@dimen/_5sdp">
+
+
+    <!--
+    //############################
+    //
+    // Star Icon
+    //
+    //############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/starIcon"
+            android:layout_width = "@dimen/_32sdp"
+            android:layout_height = "@dimen/_32sdp"
+            android:background = "@drawable/star_on"
+            android:gravity = "center"
+            android:textColor = "@color/popupBodyColor"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:strokeColor = "@color/popupBodyStroke"
+            app:strokeWidth = "@dimen/_3sdp"
+            tools:text = "12" />
+
+    <!--
+    //##########################
+    //
+    // Prizes given
+    //
+    //##########################
+    -->
+    <FrameLayout
+            android:id = "@+id/goldCoinFrame"
+            android:layout_width = "@dimen/_22sdp"
+            android:layout_height = "@dimen/_22sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@id/bombFrame"
+            app:layout_constraintStart_toEndOf = "@id/starIcon"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/coin_gold"
+                android:scaleX = "1.2"
+                android:scaleY = "1.2" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/goldCoinPrize"
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "@dimen/_16sdp"
+                android:layout_gravity = "end|bottom"
+                android:gravity = "center"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_4sdp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "1" />
+    </FrameLayout>
+
+
+    <FrameLayout
+            android:id = "@+id/bombFrame"
+            android:layout_width = "@dimen/_22sdp"
+            android:layout_height = "@dimen/_22sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@id/boltFrame"
+            app:layout_constraintStart_toEndOf = "@id/goldCoinFrame"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/bomb_on"
+                android:scaleX = "1.2"
+                android:scaleY = "1.2" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/bombPrize"
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "@dimen/_16sdp"
+                android:layout_gravity = "end|bottom"
+                android:gravity = "center"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_4sdp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "1" />
+    </FrameLayout>
+
+
+    <FrameLayout
+            android:id = "@+id/boltFrame"
+            android:layout_width = "@dimen/_22sdp"
+            android:layout_height = "@dimen/_22sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@id/claimPrizeButton"
+            app:layout_constraintStart_toEndOf = "@id/bombFrame"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/bolt_on"
+                android:scaleX = "1.2"
+                android:scaleY = "1.2" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/boltPrize"
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "@dimen/_16sdp"
+                android:layout_gravity = "end|bottom"
+                android:gravity = "center"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_4sdp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "1" />
+    </FrameLayout>
+
+
+    <!--
+    //############################
+    //
+    // Claim Button
+    //
+    //############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/claimPrizeButton"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/_28sdp"
+            android:background = "@drawable/prize_button_states"
+            android:gravity = "center"
+            android:text = "@string/prize_claim_text"
+            android:textColor = "@color/buttonText"
+            android:textSize = "@dimen/_14ssp"
+            android:textStyle = "bold"
+            android:visibility = "visible"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "162:83"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:strokeColor = "@color/buttonStroke"
+            app:strokeWidth = "@dimen/_3sdp" />
+
+    <ImageView
+            android:id = "@+id/claimCheckMark"
+            android:layout_width = "@dimen/_28sdp"
+            android:layout_height = "@dimen/_28sdp"
+            android:background = "@drawable/button_square_blue_b"
+            android:contentDescription = "@null"
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toBottomOf = "@id/claimPrizeButton"
+            app:layout_constraintEnd_toEndOf = "@id/claimPrizeButton"
+            app:layout_constraintStart_toStartOf = "@id/claimPrizeButton"
+            app:layout_constraintTop_toTopOf = "@id/claimPrizeButton"
+            app:srcCompat = "@drawable/gold_checkmark"
+            tools:visibility = "visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

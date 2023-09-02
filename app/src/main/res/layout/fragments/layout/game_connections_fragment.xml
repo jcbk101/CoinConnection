@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/game_container"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:clipChildren = "false"
+        android:clipToPadding = "false">
+
+
+    <!--
+        //#######################################
+        //
+        // Gets swapped out with new BG
+        //
+        //#######################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.ImageEffect
+            android:id = "@+id/boardBackground"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:contentDescription = "@null"
+            android:scaleType = "centerCrop"
+            app:blur_radius = "4.0"
+            app:effect = "blur"
+            app:srcCompat = "@drawable/ocean_1" />
+
+
+    <!--
+        &lt;!&ndash;
+        //#############################
+        //
+        // Where the BG slots are
+        // drawn. Not required for
+        // cards
+        //
+        //#############################
+        &ndash;&gt;
+        <ImageView
+                android:id = "@+id/boardGridSlots"
+                android:layout_width = "@dimen/GRID_WIDTH"
+                android:layout_height = "@dimen/GRID_HEIGHT"
+                android:clipChildren = "false"
+                android:clipToPadding = "false"
+                android:contentDescription = "@null"
+                app:layout_constraintBottom_toBottomOf = "@id/boardGridLayout"
+                app:layout_constraintEnd_toEndOf = "@id/boardGridLayout"
+                app:layout_constraintStart_toStartOf = "@id/boardGridLayout"
+                app:layout_constraintTop_toTopOf = "@id/boardGridLayout"
+                tools:background = "@drawable/level_02"
+                tools:srcCompat = "@drawable/level_02" />
+
+    -->
+
+    <!--
+    //#############################
+    //
+    // Draw the Board's BG to this
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GridLayoutView
+            android:id = "@+id/boardGrid"
+            android:layout_width = "@dimen/BOARD_WIDTH"
+            android:layout_height = "@dimen/BOARD_HEIGHT"
+            app:layout_constraintBottom_toBottomOf = "@id/boardGridLayout"
+            app:layout_constraintEnd_toEndOf = "@id/boardGridLayout"
+            app:layout_constraintStart_toStartOf = "@id/boardGridLayout"
+            app:layout_constraintTop_toTopOf = "@id/boardGridLayout"
+            tools:background = "#7F000000" />
+
+
+    <!--
+    //#############################
+    //
+    // Playing field: grid
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.GameGraphics.ConnectionsGridLayout
+            android:id = "@+id/boardGridLayout"
+            android:layout_width = "@dimen/GRID_WIDTH"
+            android:layout_height = "@dimen/GRID_HEIGHT"
+            android:clipChildren = "false"
+            android:clipToPadding = "false"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".4" />
+
+
+    <!--
+    //#############################
+    //
+    // Mask the grid and top of
+    // screen to create an illusion
+    // of tiles passing through a
+    // portal
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.OverlayView
+            android:id = "@+id/gridMask"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent" />
+
+
+    <!--
+    //#############################
+    //
+    // Where the Animations happen
+    //
+    //#############################
+    -->
+    <FrameLayout
+            android:id = "@+id/boardGridSpecials"
+            android:layout_width = "@dimen/GRID_WIDTH"
+            android:layout_height = "@dimen/GRID_HEIGHT"
+            android:clipChildren = "false"
+            app:layout_constraintBottom_toBottomOf = "@id/boardGridLayout"
+            app:layout_constraintEnd_toEndOf = "@id/boardGridLayout"
+            app:layout_constraintStart_toStartOf = "@id/boardGridLayout"
+            app:layout_constraintTop_toTopOf = "@id/boardGridLayout" />
+
+
+    <!--
+    //#############################
+    //
+    // Top Bar with stars, buttons
+    //
+    //#############################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/topFrame"
+            android:layout_width = "match_parent"
+            android:layout_height = "@dimen/_48sdp"
+            android:clipChildren = "false"
+            android:clipToPadding = "false"
+            android:paddingTop = "@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+        <!--
+            //#######################################
+            //
+            // Star Gauge
+            //
+            //#######################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.StarsEarnedBar
+                android:id = "@+id/starsToEarn"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_16sdp"
+                android:background = "@drawable/progress_frame"
+                android:paddingStart = "@dimen/_2sdp"
+                android:paddingTop = "@dimen/_2sdp"
+                android:paddingEnd = "@dimen/_2sdp"
+                android:paddingBottom = "@dimen/_2sdp"
+                android:thumb = "@null"
+                app:layout_constraintBottom_toBottomOf = "@id/pauseButton"
+                app:layout_constraintDimensionRatio = "12:1"
+                app:layout_constraintEnd_toStartOf = "@id/pauseButton"
+                app:layout_constraintHorizontal_bias = "0.451"
+                app:layout_constraintStart_toEndOf = "@id/timeMovesFrame"
+                app:layout_constraintTop_toTopOf = "@id/pauseButton"
+                app:progressDrawable = "@drawable/progress_yellow"
+                app:tickMarkOff = "@drawable/progress_star_off"
+                app:tickMarkOn = "@drawable/progress_star_on"
+                tools:max = "5000"
+                tools:progress = "2190"
+                tools:starPositions = "300,1900,4500" />
+
+
+        <!--
+        //#############################
+        //
+        // Board Moves
+        //
+        //#############################
+        -->
+        <FrameLayout
+                android:id = "@+id/timeMovesFrame"
+                android:layout_width = "@dimen/_40sdp"
+                android:layout_height = "@dimen/_38sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".05"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".03">
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/boardMovesText"
+                    android:layout_width = "@dimen/_38sdp"
+                    android:layout_height = "@dimen/_38sdp"
+                    android:layout_gravity = "center"
+                    android:background = "@drawable/dot_green"
+                    android:contentDescription = "@null"
+                    android:gravity = "center"
+                    android:textColor = "@color/counterText"
+                    android:textSize = "@dimen/_12ssp"
+                    android:textStyle = "bold"
+                    app:isButton = "false"
+                    app:strokeColor = "@color/counterStroke"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "20:00" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id="@+id/boardMovesLabel"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "center_horizontal"
+                    android:fontFamily = "@font/badaga"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_10ssp"
+                    android:textStyle = "bold"
+                    android:translationY = "@dimen/_26sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    app:textAllCaps = "true"
+                    tools:text = "@string/moves_text" />
+        </FrameLayout>
+
+
+        <!--
+        //#############################
+        //
+        // Pause Button
+        //
+        //#############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/pauseButton"
+                android:layout_width = "@dimen/_36sdp"
+                android:layout_height = "@dimen/_36sdp"
+                android:background = "@drawable/icon_pause"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".95"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".03" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+            <com.genesyseast.coinconnection.CustomControls.BoardTile
+                    android:layout_width = "@dimen/_40sdp"
+                    android:layout_height = "@dimen/_40sdp"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:specialList = "@array/bomb_sparkle"
+                    app:srcCompat = "@drawable/bomb_booster_yellow"
+                    app:sweeper = "vertical"
+                    app:xAdj = "@dimen/_6sdp"
+                    app:yAdj = "@dimen/_12sdp" />
+    -->
+
+    <!--
+    //#############################
+    //
+    // Score Info
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/scoreImage"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/micross"
+            android:gravity = "center_vertical"
+            android:text = "@string/score_text"
+            android:textAllCaps = "true"
+            android:textColor = "@color/goalHeaderText"
+            android:textSize = "@dimen/_16ssp"
+            android:textStyle = "bold"
+            android:visibility = "gone"
+            app:layout_constraintStart_toStartOf = "@id/boardGridLayout"
+            app:layout_constraintTop_toTopOf = "@id/boardGrid"
+            app:srcCompat = "@drawable/text_score"
+            app:strokeColor = "@color/goalHeaderStroke"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/boardScoreText"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/micross"
+            android:gravity = "center_vertical"
+            android:textColor = "@color/counterText"
+            android:textSize = "@dimen/_16ssp"
+            android:visibility = "gone"
+            app:layout_constraintStart_toEndOf = "@id/scoreImage"
+            app:layout_constraintTop_toTopOf = "@id/boardGrid"
+            app:strokeColor = "@color/counterStroke"
+            app:strokeWidth = "@dimen/_2sdp"
+            tools:text = " 999999 " />
+
+    <!--
+    //#############################
+    //
+    // Level Info
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/levelImage"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:contentDescription = "@null"
+            android:fontFamily = "@font/micross"
+            android:gravity = "center_vertical"
+            android:text = "@string/level_text"
+            android:textAllCaps = "true"
+            android:textColor = "@color/goalHeaderText"
+            android:textSize = "@dimen/_16ssp"
+            android:textStyle = "bold"
+            android:visibility = "gone"
+            app:layout_constraintEnd_toStartOf = "@id/boardLevelText"
+            app:layout_constraintTop_toTopOf = "@id/boardLevelText"
+            app:strokeColor = "@color/goalHeaderStroke"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/boardLevelText"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/micross"
+            android:gravity = "center_vertical"
+            android:textColor = "@color/counterText"
+            android:textSize = "@dimen/_16ssp"
+            android:visibility = "gone"
+            app:layout_constraintEnd_toEndOf = "@id/boardGridLayout"
+            app:layout_constraintTop_toTopOf = "@id/boardGrid"
+            app:strokeColor = "@color/counterStroke"
+            app:strokeWidth = "@dimen/_2sdp"
+            tools:text = " 4500 " />
+
+
+    <!--
+        //########################################
+        //
+        //
+        //
+        //########################################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/boardTargetHolder"
+            android:layout_width = "@dimen/FRAME_WIDTH"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/container_bottom_noline"
+            android:padding = "@dimen/_3sdp"
+            app:layout_constraintBottom_toTopOf = "@id/specialFooter"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@id/boardGridLayout">
+
+        <!--
+            //#############################
+            //
+            // Target information
+            //
+            //#############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/targetText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginBottom = "@dimen/_5sdp"
+                android:background = "#8F35889f"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center"
+                android:text = "@string/targets_text"
+                android:textColor = "@color/goalHeaderText"
+                android:textSize = "@dimen/_16ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toTopOf = "@id/dummyTarget"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = "0"
+                app:strokeColor = "@color/goalHeaderStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                app:textAllCaps = "true" />
+
+        <!--
+        //###################################
+        //
+        // Dummy Target: Used for margin ONLY
+        //
+        //###################################
+        -->
+        <View
+                android:id = "@+id/dummyTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "#00000000"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/redTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_red"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+
+                app:layout_constraintEnd_toStartOf = "@+id/greenTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:srcCompat = "@drawable/white_checkmark"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/greenTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_green"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/blueTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/redTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/blueTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_blue"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/orangeTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/greenTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/orangeTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_orange"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/pinkTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/blueTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/pinkTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_pink"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/purpleTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/orangeTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/purpleTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_purple"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/yellowTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/pinkTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/yellowTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/dot_yellow"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/purpleGemTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/purpleTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/purpleGemTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/target_jewel_purple"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/pinkGemTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/yellowTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/pinkGemTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/target_jewel_pink"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/tealGemTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/purpleGemTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/tealGemTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/target_jewel_teal"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/yellowGemTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/pinkGemTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/yellowGemTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/target_jewel_yellow"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "@id/starTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/tealGemTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <!--
+        //##############################
+        //
+        // Strictly for star & blockers
+        // targets in connections
+        // Max one blocker target!
+        //
+        //##############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/starTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/progress_star_on"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "@id/blockerTarget"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/yellowGemTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/blockerTarget"
+                android:layout_width = "@dimen/_23sdp"
+                android:layout_height = "@dimen/_23sdp"
+                android:background = "@drawable/chest_purple_1"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:visibility = "gone"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/starTarget"
+                app:layout_constraintTop_toBottomOf = "@id/targetText"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "0"
+                tools:visibility = "visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+        //#############################
+        //
+        // Random Special Button
+        //
+        //#############################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/specialFooter"
+            android:layout_width = "match_parent"
+            android:layout_height = "@dimen/_48sdp"
+            android:layout_marginBottom = "@dimen/_8sdp"
+            android:clipChildren = "false"
+            app:layout_constraintBottom_toBottomOf = "parent">
+
+        <!--        android:background="#8f317e92"-->
+
+        <!--
+        //##############################
+        //
+        // Bottom Buttons
+        //
+        //##############################
+        -->
+        <FrameLayout
+                android:id = "@+id/bombFrame"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/boltFrame"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent">
+
+            <ImageView
+                    android:id = "@+id/bombHolder"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:background = "@drawable/container_small_square_2"
+                    android:contentDescription = "@null"
+                    android:padding = "@dimen/_4sdp"
+                    android:tag = "0"
+                    app:srcCompat = "@drawable/bomb_on" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/bombCounter"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:layout_gravity = "end|top"
+                    android:background = "@drawable/button_round_green_a"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_14ssp"
+                    android:textStyle = "bold"
+                    android:translationX = "@dimen/_4sdp"
+                    android:translationY = "@dimen/_minus4sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "3" />
+        </FrameLayout>
+
+        <!--
+        Bolt
+        -->
+        <FrameLayout
+                android:id = "@+id/boltFrame"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/starFrame"
+                app:layout_constraintStart_toEndOf = "@id/bombFrame"
+                app:layout_constraintTop_toTopOf = "parent">
+
+            <ImageView
+                    android:id = "@+id/boltHolder"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:background = "@drawable/container_small_square_2"
+                    android:contentDescription = "@null"
+                    android:padding = "@dimen/_4sdp"
+                    android:tag = "0"
+                    app:srcCompat = "@drawable/bolt_off" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/boltCounter"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:layout_gravity = "end|top"
+                    android:background = "@drawable/button_round_green_a"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_14ssp"
+                    android:textStyle = "bold"
+                    android:translationX = "@dimen/_4sdp"
+                    android:translationY = "@dimen/_minus4sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "3" />
+        </FrameLayout>
+
+        <!--
+        star
+        -->
+        <FrameLayout
+                android:id = "@+id/starFrame"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/randomFrame"
+                app:layout_constraintStart_toEndOf = "@id/boltFrame"
+                app:layout_constraintTop_toTopOf = "parent">
+
+            <ImageView
+                    android:id = "@+id/starHolder"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:background = "@drawable/container_small_square_2"
+                    android:contentDescription = "@null"
+                    android:padding = "@dimen/_4sdp"
+                    android:tag = "0"
+                    app:srcCompat = "@drawable/star_on"
+                    app:tint = "#0FFFFFFF"
+                    app:tintMode = "src_atop" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/starCounter"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:layout_gravity = "end|top"
+                    android:background = "@drawable/button_round_green_a"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_14ssp"
+                    android:textStyle = "bold"
+                    android:translationX = "@dimen/_4sdp"
+                    android:translationY = "@dimen/_minus4sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "+" />
+        </FrameLayout>
+
+        <!--
+        Bomb
+        -->
+        <FrameLayout
+                android:id = "@+id/randomFrame"
+                android:layout_width = "@dimen/_48sdp"
+                android:layout_height = "@dimen/_48sdp"
+
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@id/starFrame"
+                app:layout_constraintTop_toTopOf = "parent">
+
+            <ImageView
+                    android:id = "@+id/randomHolder"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:background = "@drawable/container_small_square_2"
+                    android:contentDescription = "@null"
+                    android:padding = "@dimen/_4sdp"
+                    android:tag = "0"
+                    app:srcCompat = "@drawable/random_off" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/randomCounter"
+                    android:layout_width = "@dimen/_20sdp"
+                    android:layout_height = "@dimen/_20sdp"
+                    android:layout_gravity = "end|top"
+                    android:background = "@drawable/button_round_green_a"
+                    android:gravity = "center"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_14ssp"
+                    android:textStyle = "bold"
+                    android:translationX = "@dimen/_4sdp"
+                    android:translationY = "@dimen/_minus4sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "3" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+    //#############################
+    //
+    // Simple highlighter layer
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.HighLighter
+            android:id = "@+id/highLighter"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            tools:background = "#1FFF0000" />
+
+
+    <!-- TODO: delete this -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/badaga"
+            android:textColor = "#FFFFFFFF"
+            android:textSize = "@dimen/_20sdp"
+            android:visibility = "gone"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_4sdp"
+            app:textAllCaps = "true"
+            tools:text = "Highlighter at bottom"
+            tools:visibility = "visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

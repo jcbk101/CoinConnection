@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width = "@dimen/_220sdp"
+            android:layout_height = "@dimen/_180sdp"
+            android:background = "@drawable/box_a_green"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <ImageView
+                android:id = "@+id/imageView"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_40sdp"
+                android:layout_marginStart = "@dimen/_7sdp"
+                android:layout_marginTop = "@dimen/_6sdp"
+                android:layout_marginEnd = "@dimen/_7sdp"
+                android:background = "@drawable/biz_banner"
+                android:contentDescription = "@null"
+                android:scaleType = "center"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/bizTitle"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center"
+                android:text = "@string/biz_name"
+                android:textAllCaps = "true"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_16ssp"
+                android:textStyle = "bold"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "@id/imageView"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/bizWork"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_below = "@id/bizTitle"
+                android:fontFamily = "sans-serif-black"
+                android:gravity = "center"
+                android:text = "@string/biz_name_2"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_16ssp"
+                android:textStyle = "bold"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/bizTitle"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <!--
+            //###########################
+            //
+            // Dividers
+            //
+            //###########################
+        -->
+        <ImageView
+                android:id = "@+id/separatorAbout"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_7sdp"
+                android:contentDescription = "@null"
+                android:paddingStart = "@dimen/_7sdp"
+                android:paddingEnd = "@dimen/_7sdp"
+                android:scaleType = "fitXY"
+                app:layout_constraintTop_toBottomOf = "@id/imageView"
+                app:srcCompat = "@drawable/box_separator_c" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/currentVersion"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_below = "@id/imageView"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/versionName"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".45"
+                app:strokeColor = "@color/popupBodyStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "Current Version: 1.0.1" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/privacyPolicy"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_below = "@id/currentVersion"
+                android:layout_marginStart = "@dimen/_7sdp"
+                android:layout_marginTop = "@dimen/_10sdp"
+                android:layout_marginEnd = "@dimen/_7sdp"
+                android:background = "#2F000000"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_horizontal"
+                android:text = "@string/privacy_link_text"
+                android:textColor = "@color/colorBlue"
+                android:textColorLink = "@color/colorBlue"
+                android:textSize = "@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/currentVersion" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/aboutButtonDone"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_24sdp"
+                android:background = "@drawable/button_long_yellow_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/button_done"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/privacyPolicy"
+                app:layout_constraintVertical_bias = "0.3"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_2sdp"
+                app:textAllCaps = "true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+// My message
+Header: Thank You
+Info: <font color = "#FFCC00">Coin Connection</font> is created by John Charles for <font color = "#bf0000">Genesys East,LLC</font>. All programming, miscellaneous graphics, time and effort were handled by a single entity. Credit is given to those whose works were used in this project. Attribution is given to all work not performed by <font color = "#bf0000">Genesys East,LLC</font> following this message.
+
+Info: Thank you all for playing this game, and I hope you enjoyed it!
+
+Info: Thank you to all the artist that allow people such as myself, the opportunity to use their work.
+
+Info: Thank you, google, for Android Studio. This game was developed from scratch in 100% Java.
+
+//-
+
+Header: Company Information
+Web: https://sites.google.com/view/gensoftware
+Link: Genesys East Software
+
+
+- Graphics Attributions
+
+// Image files: Background Images
+Header: Background Images
+Web: https://craftpix.net
+Link: Craftpix - Free and Premium Game Assets
+
+//-
+
+// Using Casino Background
+Header: Vegas-style Sign
+Web: https://www.freepik.com/free-photos-vectors/background
+Link: Background vector created by freepik - www.freepik.com
+
+
+- Graphical / Special Effects Animations
+
+//
+Header: Most Animations
+Web: https://www.youtube.com/channel/UClkwgpHs_FpT4lkYZRpsJtQ
+Link: Vitaly Kuznetsov
+Web: https://www.gamedevmarket.net/member/best-game-kits/
+Link: Best-Game-Kits ( Vitaly Kuznetsov )
+
+
+Header: Treasure Chest Animations
+Author: Robert Brooks
+Web: https://www.gamedeveloperstudio.com/index.php
+Link; Game Developer Studio
+
+
+Header: Lightning Effects
+Author: neogeo37
+Web: https://graphicriver.net/user/neogeo37
+Link: Envato Market  / Graphic River
+
+
+Header: Basic Animations
+Web: https://sites.google.com/view/gensoftware
+Link: Genesys East Software
+
+
+
+- Sound Effects
+
+// Sounds 
+// All From: 
+Header: All Sound Effects
+Web: http://freesoundeffect.net/
+Link: Free Sound Effects
+
+- Music
+
+Info: All the following downloaded from
+Web: https://opengameart.org/
+Link: Open Game Art
+
+
+//Music
+// All From: Web: https://opengameart.org/
+Header: Background Music
+Author: yd
+Song: Blue Meadow In Green Sky
+Web: http://ydstuff.wordpress.com/
+Link: YD-Stuff
+
+
+Header: Background Music
+Author: Joth / Jordan
+Song: Emotional Deluge
+Song: Black Diamond
+Song: Next To You
+Web: http://paypal.me/jothmusic
+Link: Joth Music
+
+
+// Attribution: The Cynic Project / 
+Header: Background Music
+Author: cynicmusic
+Song: Mysterious Ambience
+Web: http://www.cynicmusic.com 
+Link: The Cynic Project
+Web: http://www.pixelsphere.org
+Link: Pixel Sphere
+
+
+Header: Background Music
+Author: KiluaBoy
+Song: Sleep Talking
+web: https://soundcloud.com/kilua-boy
+Link: KiluaBoy - SoundClound
+
+
+Header: Background Music
+Author: TokyoGeisha
+Song: Creep
+web: None
+
+
+Header: Background Music
+Author: You're Perfect Studio
+Song: Gone Fishin by Memoraphile
+Song: Somewhere in the Elevator by Peachtea
+Web: https://youreperfect.studio/
+Link: You're Perfect Studio
+
+
+Header: Background Music
+Author: Tiny Worlds
+Song: Happy Adventure
+Web: None
+
+
+- Dedication
+
+Header: Recognition
+web: http://www.Dynamic-Designs.us
+Link: Dynamic Designs
+
+
+Info: Please check back for new levels coming soon!
+
+skip: 10
+
+Info: The End
+
+skip: 1

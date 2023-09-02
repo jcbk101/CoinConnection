@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/parenFrame"
+            android:layout_width = "@dimen/_256sdp"
+            android:layout_height = "@dimen/_300sdp"
+android:background="@drawable/box_a_red"
+            android:paddingLeft = "@dimen/_20sdp"
+            android:paddingTop = "@dimen/_20sdp"
+            android:paddingRight = "@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <!--
+        //##############################
+        //
+        // Main frame
+        //
+        //##############################
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id = "@+id/imageView"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:background = "@drawable/basic_button"
+                android:scaleType = "center"
+                android:padding="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".0">
+
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/bizTitle"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "center"
+                    android:text = "@string/biz_name"
+                    android:textAllCaps = "true"
+                    android:textColor = "@color/popupTitleColor"
+                    android:textSize = "@dimen/_22ssp"
+                    android:textStyle = "bold"
+                    android:fontFamily="@font/micross"
+                    app:gradientOrientation = "vertical"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toTopOf = "@id/imageView"
+                    app:strokeColor = "@color/popupTitleStroke"
+                    app:strokeWidth = "@dimen/_3sdp" />
+
+
+            <TextView
+                    android:id = "@+id/privacyPolicy"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "@dimen/_20sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center_horizontal"
+                    android:text = "@string/age_privacy_link_text"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toBottomOf = "@id/bizTitle" />
+
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/ageAsk"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "@dimen/_10sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center"
+                    android:text = "@string/age_verify"
+                    android:textColor = "@color/popupBodyColor"
+                    android:textSize = "@dimen/_13ssp"
+                    android:textStyle = "bold"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toBottomOf = "@id/privacyPolicy"
+                    app:strokeColor = "@color/popupBodyStroke"
+                    app:strokeWidth = "@dimen/_3sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--
+            //###########################
+            //
+            // Dividers
+            //
+            //###########################
+        -->
+        <View
+                android:id = "@+id/ageDivider"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_4sdp"
+                android:layout_marginTop = "@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf = "@id/numPicker"
+                app:layout_constraintTop_toBottomOf = "@id/imageView"
+                app:layout_constraintVertical_bias = ".1" />
+
+        <NumberPicker
+                android:id = "@+id/numPicker"
+                android:layout_width = "match_parent"
+                android:layout_height = "0dp"
+                android:descendantFocusability = "blocksDescendants"
+                android:fontFamily = "@font/badaga"
+                android:theme = "@style/NumberPickerText"
+                app:layout_constraintBottom_toTopOf = "@id/ageVerifyButton"
+                app:layout_constraintTop_toBottomOf = "@id/ageDivider" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/ageVerifyDecline"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_36sdp"
+                android:layout_marginTop = "@dimen/_10sdp"
+                android:layout_marginEnd = "@dimen/_5sdp"
+                android:background = "@drawable/button_long_red_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/button_decline"
+                app:textAllCaps="true"
+                app:layout_constraintDimensionRatio="162:83"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@id/ageVerifyButton"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".9"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/ageVerifyButton"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_36sdp"
+                android:layout_marginTop = "@dimen/_10sdp"
+                android:background = "@drawable/button_long_blue_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/button_confirm"
+                app:textAllCaps="true"
+                app:layout_constraintDimensionRatio="162:83"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".9"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

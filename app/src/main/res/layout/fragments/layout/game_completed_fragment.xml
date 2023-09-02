@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:custom = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+    <!--
+        //#############################
+        //
+        //
+        //
+        //#############################
+    -->
+
+    <ImageView
+            android:id = "@+id/levelSelectBg"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:scaleType = "centerCrop"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/levelHeading"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/game_completed"
+            android:textColor = "@android:color/white"
+            android:textSize = "@dimen/_20ssp"
+            app:colorList = "@array/blue_reflection"
+            app:gradient = "on"
+            app:gradientOrientation = "horizontal"
+            app:layout_constraintBottom_toTopOf = "@id/gameCreditsContainer"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".3"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2sdp" />
+
+
+    <androidx.cardview.widget.CardView
+            android:id = "@+id/gameCreditsContainer"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            app:cardBackgroundColor = "#00000000"
+            app:cardCornerRadius = "@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width = "@dimen/_280sdp"
+                android:layout_height = "@dimen/_280sdp"
+                android:background = "#8F004477"
+                android:clipChildren = "true"
+                android:orientation = "vertical">
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/header"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:background = "#8F000000"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center"
+                    android:text = "@string/credits_header"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_20ssp"
+                    app:colorList = "@array/gold_reflection"
+                    app:gradient = "on"
+                    app:gradientOrientation = "vertical"
+                    app:layout_constraintBottom_toTopOf = "@id/listScroll"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp" />
+
+            <ScrollView
+                    android:id = "@+id/listScroll"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "0dp"
+                    android:scrollbarSize = "@dimen/_64sdp"
+                    android:scrollbars = "none"
+                    app:layout_constraintBottom_toTopOf = "@id/footer"
+                    app:layout_constraintTop_toBottomOf = "@id/header">
+
+                <LinearLayout
+                        android:id = "@+id/infoList"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:orientation = "vertical" />
+            </ScrollView>
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/footer"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:background = "#8F000000"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center"
+                    android:text = "@string/credits_footer"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_15ssp"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintTop_toBottomOf = "@id/listScroll"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+            android:id = "@+id/messageFrame"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toTopOf = "@id/gameCompleteDone"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@id/gameCreditsContainer"
+            tools:visibility = "visible">
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/scrollMessage"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/scroll_enabled"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_20ssp"
+                app:colorList = "@array/gold_reflection"
+                app:gradient = "on"
+                app:gradientOrientation = "vertical"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2ssp" />
+    </FrameLayout>
+
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/gameCompleteDone"
+            android:layout_width = "@dimen/_96sdp"
+            android:layout_height = "@dimen/_40sdp"
+
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/finish_text"
+            android:textColor = "@android:color/white"
+            android:textSize = "@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@id/messageFrame"
+            app:strokeColor = "@android:color/black"
+            app:strokeWidth = "@dimen/_2ssp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name = "game_bgs">
+        <item>@drawable/beach_1</item>
+        <item>@drawable/beach_2</item>
+        <item>@drawable/beach_3</item>
+        <item>@drawable/beach_4</item>
+        <item>@drawable/fairytale_1</item>
+        <item>@drawable/fairytale_2</item>
+        <item>@drawable/fairytale_3</item>
+        <item>@drawable/fairytale_4</item>
+        <item>@drawable/forest_1</item>
+        <item>@drawable/forest_2</item>
+        <item>@drawable/forest_3</item>
+        <item>@drawable/forest_4</item>
+        <item>@drawable/halloween_1</item>
+        <item>@drawable/halloween_2</item>
+        <item>@drawable/halloween_3</item>
+        <item>@drawable/halloween_4</item>
+        <item>@drawable/night_time_1</item>
+        <item>@drawable/night_time_2</item>
+        <item>@drawable/night_time_3</item>
+        <item>@drawable/night_time_4</item>
+        <item>@drawable/ocean_1</item>
+        <item>@drawable/ocean_2</item>
+        <item>@drawable/ocean_3</item>
+        <item>@drawable/ocean_4</item>
+        <item>@drawable/winter_1</item>
+        <item>@drawable/winter_2</item>
+        <item>@drawable/winter_3</item>
+        <item>@drawable/winter_4</item>
+    </integer-array>
+
+
+</resources>

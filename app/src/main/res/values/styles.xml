@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- <style name="full_Screen" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <style name = "full_Screen"
+           parent = "Theme.AppCompat.NoActionBar">
+        <item name = "windowNoTitle">true</item>
+        <item name = "windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowFullscreen">true</item>
+        <item name = "android:windowContentOverlay">@null</item>
+        <item name = "android:background">@android:color/transparent</item>
+
+        <!-- Button styling -->
+        <item name = "buttonStyle">@style/CustomButton</item>
+    </style>
+
+
+    <style name = "DialogAnimations">
+        <item name = "android:windowEnterAnimation">@anim/bounce_in</item>
+        <item name = "android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name = "DialogErrorAnimations">
+        <item name = "android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name = "android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+
+    <style name = "NumberPickerText">
+        <item name = "android:textSize">@dimen/_16sdp</item>
+        <item name = "android:fontFamily">@font/badaga</item>
+    </style>
+
+    <!-- Standard Button Style -->
+    <style name = "CustomButton"
+           parent = "Widget.AppCompat.Button">
+        <item name = "android:minHeight">@dimen/_24sdp</item>
+        <item name = "android:minWidth">0dp</item>
+        <item name = "android:padding">@dimen/_4sdp</item>
+    </style>
+
+</resources>
+

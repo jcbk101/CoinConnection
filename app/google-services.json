@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "688155099454",
+    "firebase_url": "https://coin-connection.firebaseio.com",
+    "project_id": "coin-connection",
+    "storage_bucket": "coin-connection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688155099454:android:787eb37bcfc18aebb76c6f",
+        "android_client_info": {
+          "package_name": "com.genesyseast.coinconnection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688155099454-em6hoi29cpsv7c8vud1s44ucjcthaggu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0NUiWoA7GG0lvu7eQd2HQ6ERXv-SpFBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688155099454-em6hoi29cpsv7c8vud1s44ucjcthaggu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

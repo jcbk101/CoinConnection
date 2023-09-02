@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/level_container"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/colorBackground"
+        android:clipChildren = "false">
+
+
+    <com.genesyseast.coinconnection.CustomControls.ImageScroll
+            android:id = "@+id/bgScroller"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:alpha = ".75"
+            app:scrollingBg = "@drawable/wave_static" />
+
+    <ImageView
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:alpha = ".8"
+            android:scaleType = "fitXY"
+            app:srcCompat = "@drawable/slot_purple_mask" />
+
+    <!--
+    //###########################
+    //
+    // Level selection list
+    //
+    //###########################
+    -->
+    <ListView
+            android:id = "@+id/levelLister"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:clipChildren = "false"
+            android:divider = "@null"
+            android:listSelector = "@android:color/transparent"
+            android:overScrollMode = "never"
+            android:scrollbars = "none"
+            app:layout_constraintBottom_toTopOf = "@id/footerSelect"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            tools:listitem = "@layout/level_section_05">
+
+    </ListView>
+
+
+    <!--tools:listitem = "@layout/level_section_04"-->
+
+    <!--
+    //###########################
+    //
+    // Location for player
+    //
+    //###########################
+    -->
+    <FrameLayout
+            android:id = "@+id/playerLocationFrame"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:padding = "@dimen/_1sdp"
+            app:layout_constraintBottom_toTopOf = "@id/footerSelect"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".98">
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/compassBg"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/dot_red"
+                android:contentDescription = "@null"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_horizontal"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_12ssp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp" />
+
+        <ImageView
+                android:id = "@+id/compassPointer"
+                android:layout_width = "@dimen/_9sdp"
+                android:layout_height = "@dimen/_44sdp"
+                android:layout_gravity = "center"
+                android:background = "@drawable/compass_pointer"
+                android:contentDescription = "@null" />
+
+        <ImageView
+                android:id = "@+id/compassCenter"
+                android:layout_width = "@dimen/_5sdp"
+                android:layout_height = "@dimen/_5sdp"
+                android:layout_gravity = "center"
+                android:background = "@drawable/compass_center"
+                android:contentDescription = "@null"
+                app:backgroundTint = "@color/colorFooter" />
+
+    </FrameLayout>
+
+
+    <!--
+    //##########################
+    //
+    // Daily Gift
+    //
+    //##########################
+    -->
+    <FrameLayout
+            android:id = "@+id/giftFrame"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:layout_marginTop = "@dimen/_20sdp"
+            android:clipChildren = "false"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+        <View
+                android:id = "@+id/starBurst1"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:alpha = ".75"
+                android:background = "@drawable/small_star_burst"
+                android:scaleX = "1.7"
+                android:scaleY = "1.7" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/giftBoxHolder"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:layout_gravity = "bottom"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_horizontal|bottom"
+                android:text = "@string/gift_text"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                android:transformPivotX = "@dimen/_24sdp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:srcCompat = "@drawable/gift_box_purple_01" />
+
+    </FrameLayout>
+
+
+    <!--
+    //################################
+    //
+    // Free Spins
+    //
+    //################################
+    -->
+    <FrameLayout
+            android:id = "@+id/bonusRoundsFrame"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+            android:layout_marginTop = "@dimen/_20sdp"
+            android:clipChildren = "false"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@id/giftFrame">
+
+        <View
+                android:id = "@+id/starBurst2"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/small_star_burst"
+                android:scaleX = "1.7"
+                android:scaleY = "1.7" />
+
+        <!--
+        //##########################
+        //
+        // Base to hold the wheel
+        //
+        //##########################
+        -->
+        <FrameLayout
+                android:id = "@+id/bonusBase"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/bonus_base"
+                android:clipToPadding = "false"
+                android:padding = "@dimen/_6sdp">
+
+            <ImageView
+                    android:id = "@+id/bonusWheel"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:background = "@drawable/bonus_color_wheel"
+                    android:contentDescription = "@null"
+                    android:translationX = "@dimen/_4sdp"
+                    android:translationY = "@dimen/_3sdp" />
+
+        </FrameLayout>
+
+
+        <ImageView
+                android:id = "@+id/bonusWheelMarker"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/bonus_marker"
+                android:contentDescription = "@null" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/bonusTextLabel"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center_horizontal|bottom"
+                android:fontFamily = "@font/badaga"
+                android:text = "@string/bonus_text"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_12ssp"
+                android:textStyle = "bold"
+                android:transformPivotX = "@dimen/_24sdp"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_8sdp"
+                android:visibility = "invisible"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:visibility = "visible" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/bonusRoundsBadge"
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "end|top"
+                android:background = "@drawable/circle_box"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_12ssp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_minus4sdp"
+                android:visibility = "invisible"
+                app:backgroundTint = "@color/colorRed"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:text = "3"
+                tools:visibility = "visible" />
+
+    </FrameLayout>
+
+
+    <!--
+    //################################
+    //
+    // Watch Ads for prizes
+    //
+    //################################
+    -->
+    <FrameLayout
+            android:id = "@+id/watchAdsFrame"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "0dp"
+            android:layout_marginTop = "@dimen/_20sdp"
+            app:layout_constraintDimensionRatio = "W,49:64"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@id/bonusRoundsFrame">
+
+        <ImageView
+                android:id = "@+id/watchAdsButton"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/watch_ads_mask"
+                android:contentDescription = "@null"
+                android:gravity = "center_horizontal|bottom"
+                android:transformPivotX = "@dimen/_24sdp"
+                app:backgroundTint = "#ffa72fa7"
+                app:backgroundTintMode = "src_in"
+                app:srcCompat = "@drawable/watch_ads" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_horizontal|bottom"
+                android:rotation = "-10"
+                android:scaleX = "1.1"
+                android:scaleY = "1.1"
+                android:text = "@string/watch_ads_text"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_10ssp"
+                android:textStyle = "bold"
+                android:transformPivotX = "@dimen/_24sdp"
+                android:transformPivotY = "@dimen/_24sdp"
+                android:translationY = "@dimen/_minus4sdp"
+                app:colorList = "@array/gold_reflection"
+                app:gradient = "on"
+                app:gradientOrientation = "vertical"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/getCoinsText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "bottom"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/get_coins_text"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_12sdp"
+                android:textStyle = "bold"
+                android:transformPivotX = "@dimen/_24sdp"
+                android:translationY = "@dimen/_8sdp"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+
+    </FrameLayout>
+
+
+    <!--
+    //################################
+    //
+    // Check for messages
+    // Thanks, Arrian!
+    //
+    //################################
+    -->
+    <FrameLayout
+            android:id = "@+id/mailCheckFrame"
+            android:layout_width = "@dimen/_48sdp"
+            android:layout_height = "@dimen/_48sdp"
+
+            app:layout_constraintBottom_toTopOf = "@id/footerSelect"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".02"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".98">
+
+        <ImageView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/button_square_mask"
+                android:contentDescription = "@null"
+                android:gravity = "center_horizontal|bottom"
+                android:transformPivotX = "@dimen/_24sdp"
+                app:backgroundTint = "#ffa72fa7"
+                app:backgroundTintMode = "src_in"
+                app:srcCompat = "@drawable/button_square" />
+
+        <ImageView
+                android:id = "@+id/mailCheckButton"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:contentDescription = "@null"
+                android:padding = "@dimen/_8sdp"
+                android:transformPivotX = "@dimen/_24sdp"
+                app:srcCompat = "@drawable/mail_back_off" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/mailCheckBadge"
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "end|top"
+                android:background = "@drawable/circle_box"
+                android:gravity = "center"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_12ssp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_4sdp"
+                android:translationY = "@dimen/_minus4sdp"
+                android:visibility = "invisible"
+                app:backgroundTint = "@color/colorRed"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:text = "3"
+                tools:visibility = "visible" />
+
+    </FrameLayout>
+
+
+    <!--
+    //##########################
+    //
+    // Footer
+    //
+    //##########################
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/footerSelect"
+            android:layout_width = "match_parent"
+            android:layout_height = "@dimen/_48sdp"
+            android:clipChildren = "false"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            tools:visibility = "visible">
+
+
+        <ImageView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background = "@drawable/header_footer"
+                android:contentDescription = "@null"
+                app:backgroundTint = "#5d1a5d" />
+        <!--app:backgroundTint="#5d1a5d"-->
+        <!--app:backgroundTint = "#ffa72fa7"-->
+        <!--        app:backgroundTint = "@color/colorFooter"-->
+
+        <!--
+        //##########################
+        //
+        // Money
+        //
+        //##########################
+        -->
+        <FrameLayout
+                android:id = "@+id/moneyFrame"
+                android:layout_width = "@dimen/_120sdp"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_margin = "@dimen/_4sdp"
+                android:background = "@drawable/oval_box"
+                android:clipChildren = "false"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent">
+
+            <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                    android:id = "@+id/moneyHolder"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "@dimen/_32sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center_vertical|end"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "@dimen/_12ssp"
+                    android:textStyle = "bold"
+                    app:drawableHeight = "@dimen/_30sdp"
+                    app:drawableStartCompat = "@drawable/coin_gold"
+                    app:drawableWidth = "@dimen/_30sdp"
+                    android:paddingEnd = "@dimen/_4sdp"
+                    android:paddingStart = "@dimen/_2sdp"
+                    app:strokeColor = "@android:color/black"
+                    app:strokeWidth = "@dimen/_2sdp"
+                    tools:text = "01234567899" />
+
+            <ImageView
+                    android:layout_width = "@dimen/_16sdp"
+                    android:layout_height = "@dimen/_16sdp"
+                    android:layout_gravity = "bottom"
+                    android:background = "@drawable/plus_sign"
+                    android:contentDescription = "@null"
+                    android:padding = "@dimen/_1sdp"
+                    android:textStyle = "bold"
+                    android:translationX = "@dimen/_16sdp"
+                    app:backgroundTint = "#8F000000"
+                    app:srcCompat = "@drawable/plus_sign" />
+
+        </FrameLayout>
+
+        <!--
+        //##########################
+        //
+        // All pop up buttons, etc
+        //
+        //##########################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/settingsButton"
+                android:layout_width = "@dimen/_40sdp"
+                android:layout_height = "@dimen/_40sdp"
+                android:background = "@drawable/oval_box"
+                android:padding = "@dimen/_4sdp"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/homeButton"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@id/moneyFrame"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:srcCompat = "@drawable/settings" />
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/homeButton"
+                android:layout_width = "@dimen/_40sdp"
+                android:layout_height = "@dimen/_40sdp"
+                android:background = "@drawable/oval_box"
+                android:padding = "@dimen/_4sdp"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toEndOf = "@+id/settingsButton"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:srcCompat = "@drawable/home_sign" />
+
+        <!--
+                <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                        android:id = "@+id/helpButton"
+                        android:layout_width = "@dimen/_40sdp"
+                        android:layout_height = "@dimen/_40sdp"
+                        android:background = "@drawable/oval_box"
+                        android:padding = "@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf = "parent"
+                        app:layout_constraintEnd_toEndOf = "parent"
+                        app:layout_constraintHorizontal_bias = "0.5"
+                        app:layout_constraintStart_toEndOf = "@+id/homeButton"
+                        app:layout_constraintTop_toTopOf = "parent"
+                        app:srcCompat = "@drawable/help_sign" />
+        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--
+                &lt;!&ndash;
+                //##########################
+                //
+                // Money
+                //
+                //##########################
+                &ndash;&gt;
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/moneyFrame"
+        android:layout_width = "@dimen/_120sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_margin = "@dimen/_4sdp"
+        android:background = "@drawable/oval_box"
+        android:clipChildren = "false"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent">
+
+        <View
+                android:id = "@+id/coinView"
+                android:layout_width = "@dimen/_28sdp"
+                android:layout_height = "@dimen/_28sdp"
+                android:layout_gravity = "center_vertical"
+                android:background = "@drawable/coin_gold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+        <ImageView
+                android:layout_width = "@dimen/_16sdp"
+                android:layout_height = "@dimen/_16sdp"
+                android:layout_gravity = "bottom"
+                android:background = "@drawable/plus_sign"
+                android:contentDescription = "@null"
+                android:padding = "@dimen/_1sdp"
+                android:textStyle = "bold"
+                android:translationX = "@dimen/_16sdp"
+                app:backgroundTint = "#8F000000"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintStart_toStartOf="@id/coinView"
+                app:layout_constraintBottom_toBottomOf = "@id/coinView"
+                app:layout_constraintTop_toTopOf = "@id/coinView"
+                app:srcCompat = "@drawable/plus_sign" />
+
+
+        <com.genesyseast.coinconnection.CustomControls.ImageTextView
+                android:id = "@+id/moneyHolder"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_32sdp"
+                android:background = "@drawable/half_oval_box"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_3sdp"
+                android:textColor = "@android:color/white"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@id/coinView"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:strokeColor = "@android:color/black"
+                app:strokeWidth = "@dimen/_2sdp"
+                tools:text = "9999" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        -->

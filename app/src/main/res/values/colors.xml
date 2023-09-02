@@ -1,0 +1,220 @@
+<resources>
+    <color name = "colorPrimary">#6200EE</color>
+    <color name = "colorPrimaryDark">#3700B3</color>
+    <color name = "colorAccent">#03DAC5</color>
+
+    <color name = "colorPurple">#8926ff</color>
+    <color name = "colorBlue">#0040ff</color>
+    <color name = "colorGreen">#0ca007</color>
+    <color name = "colorDkGreen">#065003</color>
+    <color name = "colorYellow">#ffa600</color>
+    <color name = "colorOrange">#ff4000</color>
+    <color name = "colorRed">#dc0305</color>
+    <color name = "colorRedDark">#6e0102</color>
+    <color name = "colorLtBlue">#0194ba</color>
+    <color name = "colorPink">#ff1ca1</color>
+    <color name = "colorGray">#5b5b5b</color>
+    <!---->
+    <color name = "colorBronze">#ab5a20</color>
+    <color name = "colorSilver">#c4c4c4</color>
+    <color name = "colorGold">#ffbf02</color>
+
+    <!---->
+    <color name = "colorRoad">#c6d9ef</color>
+    <!--    <color name = "colorRoad">#41adc7</color>-->
+    <color name = "colorRoadDark">#205763</color>
+
+    <!---->
+    <color name = "buttonRed">#d0493d</color>
+    <color name = "buttonOrange">#d79034</color>
+    <color name = "buttonYellow">#d5e02c</color>
+    <color name = "buttonGreen">#79dc31</color>
+
+
+    <!--
+    Coin Glow Colors
+    -->
+    <!--
+        <color name ="glow_red">#ffb83737</color>
+        <color name ="glow_green">#ff7dd155</color>
+        <color name ="glow_blue">#ff164bba</color>
+        <color name ="glow_orange">#ffe98f32</color>
+        <color name ="glow_purple">#ff6e26da</color>
+        <color name ="glow_pink">#ffe36dd0</color>
+        <color name ="glow_teal">#ff23ace3</color>
+        <color name ="glow_yellow">#fff7df32</color>
+    -->
+
+    <integer-array name = "glow_colors">
+        <item>0xffb83737</item> <!-- Red -->
+        <item>0xff7dd155</item> <!-- Green -->
+        <item>0xff164bba</item> <!-- Blue -->
+        <item>0xffe98f32</item> <!-- Orange -->
+        <item>0xffe36dd0</item> <!-- Pink -->
+        <!--<item>0xff23ace3</item>--> <!-- Teal -->
+        <item>0xff6e26da</item>  <!-- Purple -->
+        <item>0xfff7df32</item> <!-- Gold -->
+    </integer-array>
+
+
+    <!-- Popup Text Settings-->
+    <color name = "popupBodyStroke">#3f3a5d</color>
+    <color name = "popupBodyColor">#FFFFFF</color>
+    <color name = "popupTitleStroke">#3f3a5d</color>
+    <color name = "popupTitleColor">#dfbf1b</color>
+
+    <color name = "buttonText">#e4effa</color>
+    <color name = "buttonStroke">#3f3a5d</color>
+
+    <color name = "counterText">#f4d618</color>
+    <color name = "counterStroke">#000000</color>
+
+    <color name = "goalHeaderText">#f2d518</color>
+    <color name = "goalHeaderStroke">#212121</color>
+    <color name = "goalBodyText">#f3efd5</color>
+    <color name = "goalMarkerText">#ffffff</color>
+    <color name = "goalMarkerStroke">#000000</color>
+
+
+    <color name = "boardcolorBG">#317e92</color>
+    <color name = "boardcolorHL">#98c5dc</color>
+    <color name = "boardcolorOutline">#35889f</color>
+
+
+    <!---->
+    <color name = "colorBackground">#18003b</color>
+    <color name = "colorFooter">#7363d8</color>
+    <!--<color name = "colorBackground">#102B31</color>-->
+
+
+    <string-array name = "gold_reflection">
+        <item>0xffFFCC00</item>
+        <item>0xffFFEEAA</item>
+        <item>0xffFFCC00</item>
+        <item>0xffAA8800</item>
+        <item>0xffFFCC00</item>
+        <item>0xffAA8800</item>
+    </string-array>
+
+    <string-array name = "silver_reflection">
+        <item>0xff808080</item>
+        <item>0xfff9f9f9</item>
+        <item>0xff808080</item>
+        <item>0xff4D4D4D</item>
+        <item>0xffb3b3b3</item>
+        <item>0xff4D4D4D</item>
+    </string-array>
+
+
+    <string-array name = "bronze_reflection">
+        <item>0xffc87137</item>
+        <item>0xffe9c6af</item>
+        <item>0xffc87137</item>
+        <item>0xff784421</item>
+        <item>0xffc87137</item>
+        <item>0xff784421</item>
+    </string-array>
+
+
+    <string-array name = "red_reflection">
+        <item>0xffff0000</item>
+        <item>0xffffffff</item>
+        <item>0xffff0000</item>
+    </string-array>
+
+    <string-array name = "green_reflection">
+        <item>0xff00ff00</item>
+        <item>0xffffffff</item>
+        <item>0xff00ff00</item>
+    </string-array>
+
+    <string-array name = "blue_reflection">
+        <item>0xff0000ff</item>
+        <item>0xffffffff</item>
+        <item>0xff0000ff</item>
+    </string-array>
+
+
+    <string-array name = "aqua_reflection">
+        <item>0xff006680</item>
+        <item>0xffffffff</item>
+        <item>0xff006680</item>
+    </string-array>
+
+
+    <string-array name = "orange_reflection">
+        <item>0xffFF6600</item>
+        <item>0xffffffff</item>
+        <item>0xffff6600</item>
+    </string-array>
+
+    <string-array name = "red_white_blue">
+        <item>0xffff0000</item>
+        <item>0xff0000ff</item>
+    </string-array>
+
+
+    <string-array name = "white_on_white">
+        <item>0xffffFFFF</item>
+        <item>0xffffffff</item>
+    </string-array>
+
+    <!--
+    purple, blue, teal, green, yellow, orange, red, pink
+    -->
+    <string-array name = "rainbow">
+        <item>0xff6e26da</item>
+        <item>0xff164bba</item>
+        <item>0xff23ace3</item>
+
+        <item>0xff7dd155</item>
+        <item>0xfff7df32</item>
+        <item>0xffe98f32</item>
+
+        <item>0xffb83737</item>
+        <!--        <item>0xffe36dd0</item>-->
+    </string-array>
+
+
+    <string-array name = "purple_fade_out">
+        <item>0xFFccaaff</item>
+        <item>0xFF9955ff</item>
+        <item>0xff330080</item>
+        <item>0xff330080</item>
+    </string-array>
+
+    <string-array name = "blue_fade_out">
+        <item>0xFFaaccff</item>
+        <item>0xFF5599ff</item>
+        <item>0xff003380</item>
+        <item>0xff003380</item>
+    </string-array>
+
+
+    <string-array name = "aqua_fade_out">
+        <item>0xFFaaeeff</item>
+        <item>0xFF55ddff</item>
+        <item>0xFF55ddff</item>
+        <item>0xff006680</item>
+        <item>0xff004455</item>
+        <item>0xff004455</item>
+    </string-array>
+
+
+
+    <string-array name = "yellow_fade_out">
+        <item>0xFFfac400</item>
+        <item>0xFFfac400</item>
+        <item>0xffca5b01</item>
+        <item>0xff761e03</item>
+    </string-array>
+
+
+    <string-array name = "gold_shadow">
+        <item>0xffd0af1a</item>
+        <item>0xffd0af1a</item>
+        <item>0xff3c2e05</item>
+        <item>0xff3c2e05</item>
+    </string-array>
+
+</resources>

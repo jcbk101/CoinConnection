@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name = "level_scenes">
+        <item>@layout/level_section_end</item>
+        <item>@layout/level_section_01</item>
+        <item>@layout/level_section_02</item>
+        <item>@layout/level_section_03</item>
+        <item>@layout/level_section_04</item>
+        <item>@layout/level_section_05</item>
+        <item>@layout/level_section_start</item>
+    </integer-array>
+
+    <integer-array name = "scene_layout_list">
+        <item>-1</item>
+
+        <item>0</item>	 <!-- End 0 -->
+        <item>4</item>	 <!-- 1 -->
+        <item>1</item>	 <!-- 2 -->
+        <item>4</item>	 <!-- 3 -->
+        <item>1</item>	 <!-- 4 -->
+        <item>3</item>	 <!-- 5 -->
+        <item>4</item>	 <!-- 6 -->
+        <item>5</item>	 <!-- 7 -->
+        <item>4</item>	 <!-- 8 -->
+        <item>5</item>	 <!-- 9 -->
+        <item>3</item>	 <!-- 10 -->
+        <item>2</item>	 <!-- 11 -->
+        <item>1</item>	 <!-- 12 -->
+        <item>4</item>	 <!-- 13 -->
+        <item>3</item>	 <!-- 14 -->
+        <item>1</item>	 <!-- 15 -->
+        <item>5</item>	 <!-- 16 -->
+        <item>2</item>	 <!-- 17 -->
+        <item>1</item>	 <!-- 18 -->
+        <item>2</item>	 <!-- 19 -->
+        <item>5</item>	 <!-- 20 -->
+        <item>1</item>	 <!-- 21 -->
+        <item>3</item>	 <!-- 22 -->
+        <item>2</item>	 <!-- 23 -->
+        <item>5</item>	 <!-- 24 -->
+        <item>1</item>	 <!-- 25 -->
+        <item>2</item>	 <!-- 26 -->
+        <item>5</item>	 <!-- 27 -->
+        <item>3</item>	 <!-- 28 -->
+        <item>5</item>	 <!-- 29 -->
+        <item>2</item>	 <!-- 30 -->
+        <item>4</item>	 <!-- 31 -->
+        <item>2</item>	 <!-- 32 -->
+        <item>3</item>	 <!-- 33 -->
+        <item>2</item>	 <!-- 34 -->
+        <item>3</item>	 <!-- 35 -->
+        <item>4</item>	 <!-- 36 -->
+        <item>1</item>	 <!-- 37 -->
+        <item>3</item>	 <!-- 38 -->
+        <item>1</item>	 <!-- 39 -->
+        <item>3</item>	 <!-- 40 -->
+        <item>4</item>	 <!-- 41 -->
+        <item>2</item>	 <!-- 42 -->
+        <item>5</item>	 <!-- 43 -->
+        <item>1</item>	 <!-- 44 -->
+        <item>5</item>	 <!-- 45 -->
+        <item>3</item>	 <!-- 46 -->
+        <item>4</item>	 <!-- 47 -->
+        <item>2</item>	 <!-- 48 -->
+        <item>4</item>	 <!-- 49 -->
+        <item>1</item>	 <!-- 50 -->
+        <item>3</item>	 <!-- 51 -->
+        <item>1</item>	 <!-- 52 -->
+        <item>2</item>	 <!-- 53 -->
+        <item>3</item>	 <!-- 54 -->
+        <item>5</item>	 <!-- 55 -->
+        <item>4</item>	 <!-- 56 -->
+        <item>1</item>	 <!-- 57 -->
+        <item>2</item>	 <!-- 58 -->
+        <item>5</item>	 <!-- 59 -->
+        <item>1</item>	 <!-- 60 -->
+        <item>5</item>	 <!-- 61 -->
+        <item>4</item>	 <!-- 62 -->
+        <item>1</item>	 <!-- 63 -->
+        <item>4</item>	 <!-- 64 -->
+        <item>2</item>	 <!-- 65 -->
+        <item>5</item>	 <!-- 66 -->
+        <item>1</item>	 <!-- 67 -->
+        <item>2</item>	 <!-- 68 -->
+        <item>1</item>	 <!-- 69 -->
+        <item>2</item>	 <!-- 70 -->
+        <item>5</item>	 <!-- 71 -->
+        <item>2</item>	 <!-- 72 -->
+        <item>3</item>	 <!-- 73 -->
+        <item>2</item>	 <!-- 74 -->
+        <item>3</item>	 <!-- 75 -->
+        <item>5</item>	 <!-- 76 -->
+        <item>4</item>	 <!-- 77 -->
+        <item>3</item>	 <!-- 78 -->
+        <item>2</item>	 <!-- 79 -->
+        <item>5</item>	 <!-- 80 -->
+        <item>4</item>	 <!-- 81 -->
+        <item>3</item>	 <!-- 82 -->
+        <item>1</item>	 <!-- 83 -->
+        <item>3</item>	 <!-- 84 -->
+        <item>1</item>	 <!-- 85 -->
+        <item>3</item>	 <!-- 86 -->
+        <item>1</item>	 <!-- 87 -->
+        <item>4</item>	 <!-- 88 -->
+        <item>3</item>	 <!-- 89 -->
+        <item>1</item>	 <!-- 90 -->
+        <item>2</item>	 <!-- 91 -->
+        <item>5</item>	 <!-- 92 -->
+        <item>3</item>	 <!-- 93 -->
+        <item>1</item>	 <!-- 94 -->
+        <item>2</item>	 <!-- 95 -->
+        <item>3</item>	 <!-- 96 -->
+        <item>2</item>	 <!-- 97 -->
+        <item>4</item>	 <!-- 98 -->
+        <item>3</item>	 <!-- 99 -->
+        <item>5</item>	 <!-- 100 -->
+        <item>2</item>	 <!-- 101 -->
+        <item>5</item>	 <!-- 102 -->
+        <item>2</item>	 <!-- 103 -->
+        <item>5</item>	 <!-- 104 -->
+        <item>1</item>	 <!-- 105 -->
+        <item>2</item>	 <!-- 106 -->
+        <item>5</item>	 <!-- 107 -->
+        <item>2</item>	 <!-- 108 -->
+        <item>1</item>	 <!-- 109 -->
+        <item>2</item>	 <!-- 110 -->
+        <item>4</item>	 <!-- 111 -->
+        <item>5</item>	 <!-- 112 -->
+        <item>2</item>	 <!-- 113 -->
+        <item>1</item>	 <!-- 114 -->
+        <item>3</item>	 <!-- 115 -->
+        <item>4</item>	 <!-- 116 -->
+        <item>2</item>	 <!-- 117 -->
+        <item>3</item>	 <!-- 118 -->
+        <item>5</item>	 <!-- 119 -->
+        <item>4</item>	 <!-- 120 -->
+        <item>5</item>	 <!-- 121 -->
+        <item>1</item>	 <!-- 122 -->
+        <item>5</item>	 <!-- 123 -->
+        <item>6</item>	 <!-- Start 125 -->
+        <item>-1</item>
+    </integer-array>
+</resources>

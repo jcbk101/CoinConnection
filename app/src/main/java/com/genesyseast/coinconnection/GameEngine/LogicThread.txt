@@ -1,0 +1,606 @@
+package com.genesyseast.coinconnection.GameEngine;
+
+import android.app.Activity;
+
+import androidx.gridlayout.widget.GridLayout;
+
+import com.genesyseast.coinconnection.CustomControls.CustomTimer;
+import com.genesyseast.coinconnection.GameGraphics.CardsGridLayout;
+import com.genesyseast.coinconnection.GameGraphics.ConnectionsGridLayout;
+
+import java.util.ArrayList;
+
+public class LogicThread
+        extends Thread
+{
+    public static  int                CMD_IDLE            = 0;
+    public static  int                CMD_UPDATE_GRID     = 1;
+    public static  int                CMD_SWAP            = 2;
+    public static  int                CMD_FAKE_SWAP       = 3;
+    public static  int                CMD_CREATE_SPECIALS = 4;
+    public static  int                CMD_PROCESS_MATCHES = 5;
+    public static  int                CMD_DROP            = 6;
+    public static  int                CMD_SHOW_HINT       = 7;
+    public static  int                CMD_LEVEL_COMPLETE  = 8;
+    public static  int                CMD_LEVEL_FAILED    = 9;
+    public static  int                CMD_FLIP            = 10;
+    public static  int                CMD_GEM_DROP        = 11;
+    public static  int                CMD_GIVE_SPECIAL    = 12;
+    //
+    private        int                currentCmd          = 0;
+    private        boolean            isRunning           = false;
+    public         int                animationsRunning   = 0;
+    public         ArrayList<Integer> cmdStack;
+    //
+    public static  LogicThread        instance;
+    //
+    private        Activity           activity;
+    private        GridLayout         gridLayout;
+    //
+    private static int                saveCurrentCmd;
+    private static int                saveAniRun;
+    //
+    private        long               hintTimer           = -1;
+    private        int                hintDelay           = 15000;
+    private        int                stuck               = 0;
+    
+    /**
+     * refresh data for a new game
+     */
+    public void clearData()
+    {
+        hintTimer = -1;
+        currentCmd = CMD_IDLE;
+        saveCurrentCmd = currentCmd;
+        animationsRunning = 0;
+        if ( cmdStack != null )
+        {
+            cmdStack.clear();
+        }
+    }
+    
+    public void saveLogic()
+    {
+        saveCurrentCmd = currentCmd;
+        saveAniRun = animationsRunning;
+    }
+    
+    public void restoreLogic()
+    {
+        if ( cmdStack != null )
+        {
+            if ( saveCurrentCmd != CMD_IDLE )
+            {
+                cmdStack.add( saveCurrentCmd );
+                animationsRunning = saveAniRun;
+            }
+            else
+            {
+                cmdStack.clear();
+                animationsRunning = 0;
+            }
+        }
+    }
+    
+    /**
+     * Start up the hint system
+     *
+     * @param hintTimer
+     */
+    public void setHintTimer( long hintTimer )
+    {
+        this.hintTimer = (hintTimer - hintDelay);
+    }
+    
+    /**
+     * Get an instance of the grid class
+     *
+     * @param gridLayout
+     */
+    public void setGridLayout( GridLayout gridLayout )
+    {
+        this.gridLayout = gridLayout;
+    }
+    
+    
+    /**
+     * Current command being run
+     *
+     * @return
+     */
+    public int getCurrentCmd()
+    {
+        return currentCmd;
+    }
+    
+    /**
+     * Clear the current command whenever
+     *
+     * @param currentCmd
+     */
+    public void clearCurrentCmd( int currentCmd )
+    {
+        this.currentCmd = 0;
+    }
+    
+    /**
+     * Constructor
+     *
+     * @param activity
+     */
+    public LogicThread( Activity activity )
+    {
+        this.activity = activity;
+        
+        // When this is called, set game variables
+        //        isRunning = true;
+        cmdStack = new ArrayList<>();
+        //        currentCmd = CMD_IDLE;
+        currentCmd = -1;
+    }
+    
+    /**
+     * //#####################################
+     * <p>
+     * Start / Stop the game engine
+     * <p>
+     * //#####################################
+     *
+     * @param running
+     */
+    public void setRunning( boolean running )
+    {
+        isRunning = running;
+        
+        // MUST create a new instance
+        if ( !running )
+        {
+            instance = null;
+            cmdStack = null;
+        }
+    }
+    
+    
+    /**
+     * //#####################################
+     * <p>
+     * Main game loop. Calls needed features
+     * SYNCHROUSLY and handled in
+     * a separate thread as needed.
+     * <p>
+     * //#####################################
+     */
+    @Override
+    public void run()
+    {
+        //        super.run();
+        
+        isRunning = true;
+        
+        // Start the hint timer
+        hintTimer = -1;
+        
+        
+        //####################################
+        //
+        // Purpose of this thread is to allow
+        // animations_bg to run to completion and
+        // allow each needed function to run
+        // synchronously without interruption
+        //
+        //####################################
+        while ( isRunning )
+        {
+            if ( GameEngine.gamePaused )
+            {
+                continue;
+            }
+            
+            // Check for hint
+            if ( hintTimer > CustomTimer.currentTime && currentCmd == CMD_IDLE )
+            {
+                hintTimer = 0;
+                if ( cmdStack != null )
+                {
+                    cmdStack.add( CMD_SHOW_HINT );
+                }
+            }
+            
+            
+            //##################################
+            //
+            // ARGH!!!!!!!!! Stupid CARDS!
+            //
+            //##################################
+            if ( cmdStack != null && cmdStack.size() == 0 && animationsRunning == 0 && currentCmd != CMD_IDLE )
+            {
+                stuck++;
+                if ( stuck > 200 )
+                {
+                    currentCmd = CMD_IDLE;
+                    stuck = 3241;
+                }
+            }
+            
+            // All executed animations_bg must finish first
+            // And there MUST be a command on the stack
+            if ( cmdStack != null && animationsRunning <= 0 && cmdStack.size() > 0 )
+            {
+                //
+                // Update the main grid if a
+                // request was made
+                //
+                try
+                {
+                    currentCmd = cmdStack.get( cmdStack.size() - 1 );
+                    cmdStack.remove( cmdStack.size() - 1 );
+                    
+                    //                    Log.d( "Thread", "Got a CMD: " + commands[ currentCmd ] );
+                    
+                    //################################
+                    // Do we need to update the grid?
+                    // Simple, basic call
+                    //################################
+                    if ( currentCmd == CMD_UPDATE_GRID && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null )
+                                {
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                    else
+                                    {
+                                        (( CardsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                }
+                            }
+                        } );
+                    }
+                    //################################
+                    //
+                    //
+                    //################################
+                    else if ( (currentCmd == CMD_SWAP || currentCmd == CMD_FLIP) && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null )
+                                {
+                                    // Swap
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                    else
+                                    {
+                                        (( CardsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                }
+                                //Log.d( "Thread", "Leaving MATCHES MADE -> Count = " + animationsRunning );
+                            }
+                        } );
+                    }
+                    //################################
+                    //
+                    //
+                    //################################
+                    else if ( currentCmd == CMD_FAKE_SWAP && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null )
+                                {
+                                    // Swap
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                    else
+                                    {
+                                        (( CardsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                }
+                                //Log.d( "Thread", "Leaving MATCHES MADE -> Count = " + animationsRunning );
+                            }
+                        } );
+                    }
+                    //################################
+                    // Do we need to create special
+                    // items and have them drop??
+                    //################################
+                    else if ( currentCmd == CMD_CREATE_SPECIALS && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null && gridLayout instanceof ConnectionsGridLayout )
+                                {
+                                    // Create special items
+                                    (( ConnectionsGridLayout ) gridLayout).createSpecialItems();
+                                    
+                                    // Put tiles to MATCHED state
+                                    //                                gridLayout.signalMatchesFound();
+                                    
+                                    // Start animating changes
+                                    (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                }
+                                //Log.d( "Thread", "Leaving SPECIALS MADE -> Count = " + animationsRunning );
+                            }
+                        } );
+                    }
+                    //################################
+                    // Do we need to create special
+                    // items and have them drop??
+                    //################################
+                    else if ( currentCmd == CMD_GIVE_SPECIAL && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null && gridLayout instanceof ConnectionsGridLayout )
+                                {
+                                    // Create special items
+                                    (( ConnectionsGridLayout ) gridLayout).createSpecialItemToGive();
+                
+                                    // Start animating changes
+                                    (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                }
+                            }
+                        } );
+                    }
+                    //################################
+                    // Do we need to animate the tiles
+                    // being removed?
+                    //################################
+                    else if ( currentCmd == CMD_PROCESS_MATCHES && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null )
+                                {
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        // Put tiles to MATCHED state
+                                        (( ConnectionsGridLayout ) gridLayout).signalMatchesFound();
+                                        
+                                        // Start animating them [ Remove from board visually ]
+                                        (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                    else
+                                    {
+                                        // Start animating them [ Remove from board visually ]
+                                        (( CardsGridLayout ) gridLayout).onUpdateGrid();
+                                    }
+                                }
+                                //Log.d( "Thread", "Leaving MATCHES MADE -> Count = " + animationsRunning );
+                            }
+                        } );
+                    }
+                    //################################
+                    // Do we need to animate the
+                    // floating tiles being dropped??
+                    //################################
+                    else if ( currentCmd == CMD_DROP && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null && gridLayout instanceof ConnectionsGridLayout )
+                                {
+                                    // Put tiles to MATCHED state
+                                    (( ConnectionsGridLayout ) gridLayout).signalDroppingTiles();
+                                    
+                                    // Start animating them
+                                    (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                }
+                                //Log.d( "Thread", "Leaving DROP -> Count = " + tilesDropping );
+                            }
+                        } );
+                    }
+                    else if ( currentCmd == CMD_GEM_DROP && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                if ( gridLayout != null && gridLayout instanceof ConnectionsGridLayout )
+                                {
+                                    // Put tiles to MATCHED state
+                                    (( ConnectionsGridLayout ) gridLayout).signalDroppingGems();
+                                    
+                                    // Start animating them
+                                    (( ConnectionsGridLayout ) gridLayout).onUpdateGrid();
+                                }
+                                //Log.d( "Thread", "Leaving DROP -> Count = " + tilesDropping );
+                            }
+                        } );
+                    }
+                    else if ( currentCmd == CMD_IDLE && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                //Log.d( "Thread", "Idle Error Check" );
+                                if ( gridLayout != null )
+                                {
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).checkForErrors();
+                                        
+                                        // To use for "target reached" checking
+                                        if ( (( ConnectionsGridLayout ) gridLayout).checkTargetsReached() )
+                                        {
+                                            addToStack( LogicThread.CMD_LEVEL_COMPLETE );
+                                        }
+                                        else
+                                        {
+                                            // Prepare the hint time
+                                            (( ConnectionsGridLayout ) gridLayout).checkIfMatchesExist( false, true );
+                                            //
+                                            hintTimer = (CustomTimer.currentTime - hintDelay);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //#################################
+                                        //
+                                        // Clear any errors on the board
+                                        //
+                                        //#################################
+                                        (( CardsGridLayout ) gridLayout).checkForErrors();
+                                        
+                                        // To use for "target reached" checking
+                                        if ( (( CardsGridLayout ) gridLayout).checkTargetsReached() == 0 )
+                                        {
+                                            addToStack( LogicThread.CMD_LEVEL_COMPLETE );
+                                        }
+                                        else if ( (( CardsGridLayout ) gridLayout).checkMovesExhausted() )
+                                        {
+                                            addToStack( LogicThread.CMD_LEVEL_FAILED );
+                                        }
+                                        else
+                                        {
+                                            if ( (( CardsGridLayout ) gridLayout).getFlippedTiles() == 2 )
+                                            {
+                                                (( CardsGridLayout ) gridLayout).setFlippedTiles( 0 );
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } );
+                    }
+                    else if ( currentCmd == CMD_SHOW_HINT && gridLayout != null )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                //Log.d( "Thread", "Idle Error Check" );
+                                if ( gridLayout != null && gridLayout instanceof ConnectionsGridLayout )
+                                {
+                                    (( ConnectionsGridLayout ) gridLayout).showHint();
+                                }
+                                
+                                // Start animating them
+                                //                                gridLayout.onDrawGrid();
+                                
+                                currentCmd = CMD_IDLE;
+                                hintTimer = (CustomTimer.currentTime - hintDelay);
+                            }
+                        } );
+                    }
+                    //################################
+                    // Game is complete
+                    //################################
+                    else if ( currentCmd == CMD_LEVEL_COMPLETE )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                //Log.d( "Thread", "Idle Error Check" );
+                                if ( gridLayout != null )
+                                {
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).signalLevelComplete();
+                                    }
+                                    else
+                                    {
+                                        (( CardsGridLayout ) gridLayout).signalLevelComplete();
+                                    }
+                                }
+                            }
+                        } );
+                    }
+                    //################################
+                    // Game is a failure
+                    //################################
+                    else if ( currentCmd == CMD_LEVEL_FAILED )
+                    {
+                        activity.runOnUiThread( new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                //Log.d( "Thread", "Idle Error Check" );
+                                if ( gridLayout != null )
+                                {
+                                    if ( gridLayout instanceof ConnectionsGridLayout )
+                                    {
+                                        (( ConnectionsGridLayout ) gridLayout).signalLevelFailed();
+                                    }
+                                    else
+                                    {
+                                        (( CardsGridLayout ) gridLayout).signalLevelFailed();
+                                    }
+                                }
+                            }
+                        } );
+                    }
+                }
+                catch ( NullPointerException npe )
+                {
+                    npe.getMessage();
+                }
+            }
+        }
+        
+        
+        //######################
+        //
+        // Kill memory leaks
+        //
+        //######################
+        cmdStack = null;
+        instance = null;
+        activity = null;
+        gridLayout = null;
+    }
+    
+    
+    /**
+     * //#####################################
+     * <p>
+     * Hope to prevent errors after killing
+     * the process
+     * <p>
+     * //#####################################
+     *
+     * @param cmdCode
+     */
+    public void addToStack( int cmdCode )
+    {
+        if ( cmdStack != null )
+        {
+            cmdStack.add( cmdCode );
+        }
+    }
+}

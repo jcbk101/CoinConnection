@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/pauseBox"
+            android:layout_width = "@dimen/_220sdp"
+            android:layout_height = "@dimen/_220sdp"
+            android:background = "@drawable/box_a_purple"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+        <!--
+        //############################
+        //
+        // Coin outline
+        //
+        //############################
+        -->
+        <ImageView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:alpha = ".3"
+                android:background = "@drawable/coin_pattern"
+                android:contentDescription = "@null" />
+
+
+        <!--
+        //############################
+        //
+        // Close Button
+        //
+        //############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/pauseResumeButton"
+                android:layout_width = "@dimen/_18sdp"
+                android:layout_height = "@dimen/_18sdp"
+                android:background = "@drawable/gold_x"
+                app:isButton="true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".95"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".05" />
+
+
+        <!--
+        //############################
+        //
+        // Game Paused Text
+        //
+        //############################
+        -->
+        <ImageView
+                android:id = "@+id/pauseTitle"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_75sdp"
+                android:contentDescription = "@null"
+                android:textColor = "@color/buttonText"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "2.15:1"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".08"
+                app:srcCompat = "@drawable/text_gamepaused_a" />
+
+
+        <!--
+        //############################
+        //
+        // Main buttons
+        //
+        //############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/pauseMenuButton"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_margin = "@dimen/_3sdp"
+                android:background = "@drawable/button_long_blue_a"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/menu_text"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_18ssp"
+                android:textStyle = "bold"
+                app:isButton = "true"
+                app:layout_constraintBottom_toTopOf = "@+id/pauseQuitButton"
+                app:layout_constraintDimensionRatio = "4:1"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/pauseTitle"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                app:textAllCaps = "true" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/pauseQuitButton"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_margin = "@dimen/_3sdp"
+                android:background = "@drawable/button_long_red_b"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:text = "@string/quite_game_text"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_18ssp"
+                android:textStyle = "bold"
+                app:isButton = "true"
+                app:layout_constraintBottom_toTopOf = "@id/sfxButton"
+                app:layout_constraintDimensionRatio = "4:1"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.5"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/pauseMenuButton"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                app:textAllCaps = "true" />
+
+
+        <!--
+        //############################
+        //
+        // Toggles
+        //
+        //############################
+        -->
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id = "@+id/sfxButton"
+                android:layout_width = "@dimen/_36sdp"
+                android:layout_height = "@dimen/_36sdp"
+                android:background = "@drawable/sfx_note_states"
+                android:checked = "false"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:thumb = "@android:color/transparent"
+                android:track = "@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "@id/pauseMenuButton"
+                app:layout_constraintTop_toBottomOf = "@+id/pauseQuitButton" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id = "@+id/musicButton"
+                android:layout_width = "@dimen/_36sdp"
+                android:layout_height = "@dimen/_36sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:background = "@drawable/music_note_states"
+                android:checked = "false"
+                android:thumb = "@android:color/transparent"
+                android:track = "@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "@id/pauseMenuButton"
+                app:layout_constraintTop_toBottomOf = "@+id/pauseQuitButton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

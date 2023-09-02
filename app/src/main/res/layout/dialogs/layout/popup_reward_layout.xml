@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width = "@dimen/_180sdp"
+            android:layout_height = "@dimen/_180sdp"
+            android:background = "@drawable/simple_box_blue"
+            android:paddingStart = "@dimen/_3sdp"
+            android:paddingTop = "@dimen/_2sdp"
+            android:paddingEnd = "@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+        <!--
+        //############################
+        //
+        // Title
+        //
+        //############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/rewardTitle"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:background = "@drawable/header_box"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center"
+                android:padding = "@dimen/_2sdp"
+                android:text = "@string/reward_earned_text"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_16ssp"
+                android:textStyle = "bold"
+                app:backgroundTint = "@color/colorLtBlue"
+                app:backgroundTintMode = "src_in"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_4sdp"
+                app:textAllCaps = "true" />
+
+
+        <!--
+        //############################
+        //
+        // Message Body
+        //
+        //############################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/rewardMessage"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:background = "#1F000000"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_2sdp"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/coinRewardImg"
+                app:strokeColor = "@color/popupBodyStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                tools:text = "You received 2 coins" />
+
+        <!--
+        //############################
+        //
+        // Coin
+        //
+        //############################
+        -->
+        <ImageView
+                android:id = "@+id/coinRewardImg"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_64sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:srcCompat = "@drawable/coin_gold"
+                android:contentDescription = "@null" />
+
+        <View
+                android:id = "@+id/rewardSparkle"
+                android:layout_width = "@dimen/_44sdp"
+                android:layout_height = "@dimen/_44sdp"
+                android:background = "@drawable/sparkle"
+                app:layout_constraintBottom_toBottomOf = "@id/coinRewardImg"
+                app:layout_constraintEnd_toEndOf = "@id/coinRewardImg"
+                app:layout_constraintHorizontal_bias = "1"
+                app:layout_constraintStart_toStartOf = "@id/coinRewardImg"
+                app:layout_constraintTop_toTopOf = "@id/coinRewardImg"
+                app:layout_constraintVertical_bias = ".05" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

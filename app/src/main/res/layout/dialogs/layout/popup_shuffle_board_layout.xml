@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/detailsContainer"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+
+    <ImageView
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:scaleType = "centerCrop"
+            android:visibility = "invisible"
+            app:srcCompat = "@drawable/night_time_4"
+            tools:visibility = "visible" />
+
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:alpha = ".6"
+                android:background = "#FF000000" />
+
+    <!--
+    //#############################
+    //
+    // Text Data
+    //
+    //#############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/levelCompleteText"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/lobster"
+            android:gravity = "center"
+            android:paddingBottom = "@dimen/_14sdp"
+            android:shadowColor = "#FF000000"
+            android:shadowDy = "2"
+            android:shadowRadius = "4"
+            android:textColor = "@android:color/white"
+            android:textSize = "@dimen/_40ssp"
+            android:textStyle = "bold"
+            app:colorList = "@array/yellow_fade_out"
+            app:gradient = "on"
+            app:gradientOrientation = "vertical"
+            app:layout_constraintVertical_bias = ".45"
+            app:strokeLayers = "#FFFFFFFF,#FF761e03"
+            app:strokeWidth = "@dimen/_6sdp"
+            tools:text = "S" />
+
+    <!--
+    Yellow
+        app:strokeLayers = "#FFFFFFFF,#FF761e03"
+            app:colorList = "@array/yellow_fade_out"
+    -->
+
+    <!--
+    Aqua
+                app:strokeLayers = "#FFFFFFFF,#FF004455"
+            app:colorList = "@array/aqua_fade_out"
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

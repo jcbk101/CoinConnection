@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    //#########################
+    //
+    // Objectives
+    //
+    //#########################
+    -->
+    <string name = "target_objective">Goals</string>
+    <string name = "points_needed">Goal:</string>
+    <string name = "message_objective">"What's needed to complete this level "</string>
+
+    <!--
+    //##############################################
+    //
+    // All for CARD GAME
+    // Moves Limit: Create card flipper that
+    // hides / shows Gems. If MAX gems not found
+    // in moves given, level fails: #0, #1, #2
+    //
+    //##############################################
+    -->
+    <string-array name = "cards_messages">
+    <item>
+        "Hide and Seek: Find Coin and Jewel cards;"
+        "Complete in %1$d move;"
+        "Match %2$d coin;"
+        "Match %3$d gem"
+    </item>
+
+        <!-- -->
+        <item>
+        "Find the Jewels: Find Jewel cards;"
+        "Complete in %1$d move;"
+        "Match %2$d gem"
+    </item>
+
+        <!-- -->
+        <item>
+        "Find the Coins: Find Coin cards;"
+        "Complete in %1$d move;"
+        "Match %2$d coin;"
+    </item>
+    </string-array>
+
+
+    <!--
+    //##############################################
+    //
+    // All for CONNECTIONS
+    // Moves Limit: Create card flipper that
+    // hides / shows Gems. If MAX gems not found
+    // in moves given, level fails
+    //
+    //##############################################
+    -->
+    <string-array name = "connections_messages">
+        <item>
+            "Coin connecting!;"
+            "Clear %1$d coin target;"
+            "%2$s"
+            "Complete in time allowed"
+        </item>
+
+        <item>
+            "Meet Coin and Point requirements;"
+            "Clear %1$d coin target;"
+            "Earn %2$d point;"
+            "%3$s"
+            "Complete in time allowed"
+        </item>
+
+        <!-- -->
+        <item>
+            "Meet Coin and Gem requirements;"
+            "Clear %1$d coin target;"
+            "Collect %2$d gem target;"
+            "%3$s"
+            "Complete in time allowed"
+        </item>
+
+        <!-- -->
+        <item>
+            "Clear Coin and Gem targets\nMeet points requirement;"
+            "Clear %1$d coin target;"
+            "Earn %2$d point;"
+            "Collect %3$d gem target;"
+            "%4$s"
+            "Complete in time allowed"
+        </item>
+
+
+        <!--
+        //##############################################
+        //
+        // Stars Earned Only
+        //
+        //##############################################
+        -->
+        <item>
+            "Earn enough points to get all three stars!"
+        </item>
+    </string-array>
+
+
+    <!--
+    //##############################
+    //
+    // Base target number, minimum!
+    //
+    //##############################
+    -->
+    <integer-array name = "targets_per_level">
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>14</item>
+        <item>14</item>
+        <item>14</item>
+        <item>16</item>
+        <item>16</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>20</item>
+        <item>20</item>
+        <item>22</item>
+        <item>22</item>
+        <item>24</item>
+        <item>20</item>
+        <item>14</item>
+    </integer-array>
+
+</resources>
+
+
+        <!--
+        <item>
+        "Connect and match coin;"
+        "Clear %1$d coin target;"
+        "Complete in time allowed"
+        </item>
+
+        <item>
+        "Meet Point and Coin requirements;"
+        "Clear %1$d coin target;"
+        "Earn %2$d point;"
+        "Complete in time allowed"
+        </item>
+
+        <item>
+        "Meet Coin and Gem requirements;"
+        "Clear %1$d coin target;"
+        "Destroy %2$d gem target;"
+        "Complete in time allowed"
+        </item>
+
+        <item>
+        "Clear Coin and Gem targets\nMeet points requirement;"
+        "Clear %1$d coin target;"
+        "Earn %2$d point;"
+        "Destroy %3$d gem target;"
+        "Complete in time allowed"
+        </item>
+        -->

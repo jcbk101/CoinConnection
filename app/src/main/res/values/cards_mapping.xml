@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        32 Areas
+        18 Levels per Area
+        To ramp up difficulty:
+            Starting_Color_Index = (Current_Area / 4)
+            If max reached per level, stay on last index
+            until all levels completed
+
+            Target numbers also increase with levels to
+            help with difficulty
+    -->
+
+    <!--
+    //#########################
+    //
+    // Format:
+    //         Coins : min, max
+    //         Jewels: min, max
+    //
+    //#########################
+    -->
+    <string-array name = "cards_targets">
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>1, 1</item>
+
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>1, 1</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+
+        <item>2, 2</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+        <item>2, 2</item>
+
+<!--
+        <item>2, 3, 0, 2</item>
+        <item>2, 3, 0, 2</item>
+        <item>2, 3, 1, 2</item>
+        <item>2, 4, 0, 2</item>
+        <item>2, 4, 0, 2</item>
+        <item>2, 4, 1, 2</item>
+
+        <item>2, 3, 1, 3</item>
+        <item>2, 3, 1, 3</item>
+        <item>2, 3, 1, 4</item>
+        <item>2, 4, 1, 4</item>
+        <item>2, 3, 1, 4</item>
+        <item>2, 4, 1, 3</item>
+
+        <item>2, 3, 2, 4</item>
+        <item>2, 3, 2, 4</item>
+        <item>2, 4, 2, 4</item>
+        <item>2, 5, 2, 3</item>
+        <item>2, 6, 2, 2</item>
+        <item>2, 4, 2, 4</item>
+-->
+    </string-array>
+
+
+    <string-array name = "cards_map_data">
+        <item>@array/eight_corners_map</item>
+        <item>@array/eight_corners_hole_map</item>
+        <item>@array/fat_letter_i_map</item>
+        <item>@array/fat_letter_i_flipped_map</item>
+        <item>@array/four_corners_map</item>
+        <item>@array/four_corners_hole_map</item>
+        <item>@array/hour_glass_map</item>
+        <item>@array/hour_glass_flipped_map</item>
+        <item>@array/keg_map</item>
+        <item>@array/keg_flipped_map</item>
+        <item>@array/keg_flipped_hole_map</item>
+        <item>@array/keg_hole_map</item>
+        <item>@array/letter_a_map</item>
+        <item>@array/letter_i_map</item>
+        <item>@array/letter_i_flipped_map</item>
+        <item>@array/letter_i_flipped_hole_map</item>
+        <item>@array/letter_i_hole_map</item>
+        <item>@array/letter_m_map</item>
+        <item>@array/letter_s_map</item>
+        <item>@array/letter_s_flipped_map</item>
+        <item>@array/letter_s_hole_map</item>
+        <item>@array/letter_v_map</item>
+        <item>@array/letter_v_hole_map</item>
+        <item>@array/letter_w_map</item>
+        <item>@array/number_8_map</item>
+        <item>@array/number_8_flipped_map</item>
+        <item>@array/square_map</item>
+        <item>@array/square_four_slots_map</item>
+        <item>@array/square_hole_map</item>
+        <item>@array/squared_corners_map</item>
+        <item>@array/squared_corners_hole_map</item>
+        <item>@array/three_levels_map</item>
+        <item>@array/three_levels_flipped_map</item>
+        <item>@array/three_levels_flipped_hole_map</item>
+        <item>@array/three_levels_hole_map</item>
+    </string-array>
+
+    <!--
+    //########################
+    //
+    // [ Board # 0 ] Data for: EIGHT_CORNERS
+    //
+    //########################
+    -->
+    <string-array name = "eight_corners_map">
+        <item>0,0,1,1,1,1,0,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,0,1,1,1,1,0,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 1 ] Data for: EIGHT_CORNERS_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "eight_corners_hole_map">
+        <item>0,0,1,1,1,1,0,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,0,1,1,1,1,0,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 2 ] Data for: FAT_LETTER_I
+    //
+    //########################
+    -->
+    <string-array name = "fat_letter_i_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 3 ] Data for: FAT_LETTER_I_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "fat_letter_i_flipped_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 4 ] Data for: FOUR_CORNERS
+    //
+    //########################
+    -->
+    <string-array name = "four_corners_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 5 ] Data for: FOUR_CORNERS_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "four_corners_hole_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 6 ] Data for: HOUR_GLASS
+    //
+    //########################
+    -->
+    <string-array name = "hour_glass_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,0,1,1,1,1,0,0</item>
+        <item>0,0,1,1,1,1,0,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 7 ] Data for: HOUR_GLASS_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "hour_glass_flipped_map">
+        <item>1,1,0,0,0,0,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,0,0,0,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 8 ] Data for: KEG
+    //
+    //########################
+    -->
+    <string-array name = "keg_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 9 ] Data for: KEG_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "keg_flipped_map">
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,0,0,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 10 ] Data for: KEG_FLIPPED_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "keg_flipped_hole_map">
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,0,0,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 11 ] Data for: KEG_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "keg_hole_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 12 ] Data for: LETTER_A
+    //
+    //########################
+    -->
+    <string-array name = "letter_a_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 13 ] Data for: LETTER_I
+    //
+    //########################
+    -->
+    <string-array name = "letter_i_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 14 ] Data for: LETTER_I_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "letter_i_flipped_map">
+        <item>1,1,0,0,0,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,0,0,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 15 ] Data for: LETTER_I_FLIPPED_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "letter_i_flipped_hole_map">
+        <item>1,1,0,0,0,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,0,0,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 16 ] Data for: LETTER_I_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "letter_i_hole_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 17 ] Data for: LETTER_M
+    //
+    //########################
+    -->
+    <string-array name = "letter_m_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 18 ] Data for: LETTER_S
+    //
+    //########################
+    -->
+    <string-array name = "letter_s_map">
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 19 ] Data for: LETTER_S_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "letter_s_flipped_map">
+        <item>1,1,1,1,0,0,0,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,0,0,0,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 20 ] Data for: LETTER_S_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "letter_s_hole_map">
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,1</item>
+        <item>0,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 21 ] Data for: LETTER_V
+    //
+    //########################
+    -->
+    <string-array name = "letter_v_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 22 ] Data for: LETTER_V_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "letter_v_hole_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 23 ] Data for: LETTER_W
+    //
+    //########################
+    -->
+    <string-array name = "letter_w_map">
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 24 ] Data for: NUMBER_8
+    //
+    //########################
+    -->
+    <string-array name = "number_8_map">
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 25 ] Data for: NUMBER_8_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "number_8_flipped_map">
+        <item>0,1,1,1,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,0,1,1,0</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 26 ] Data for: SQUARE
+    //
+    //########################
+    -->
+    <string-array name = "square_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 27 ] Data for: SQUARE_FOUR_SLOTS
+    //
+    //########################
+    -->
+    <string-array name = "square_four_slots_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,0,0,1,1,0,0,1</item>
+        <item>1,0,1,1,1,1,0,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,0,1,1,1,1,0,1</item>
+        <item>1,0,0,1,1,0,0,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 28 ] Data for: SQUARE_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "square_hole_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 29 ] Data for: SQUARED_CORNERS
+    //
+    //########################
+    -->
+    <string-array name = "squared_corners_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 30 ] Data for: SQUARED_CORNERS_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "squared_corners_hole_map">
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>0,1,1,0,0,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 31 ] Data for: THREE_LEVELS
+    //
+    //########################
+    -->
+    <string-array name = "three_levels_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 32 ] Data for: THREE_LEVELS_FLIPPED
+    //
+    //########################
+    -->
+    <string-array name = "three_levels_flipped_map">
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 33 ] Data for: THREE_LEVELS_FLIPPED_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "three_levels_flipped_hole_map">
+        <item>1,1,0,1,1,0,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,0,1,1,0,1,1</item>
+    </string-array>
+
+
+    <!--
+    //########################
+    //
+    // [ Board # 34 ] Data for: THREE_LEVELS_HOLE
+    //
+    //########################
+    -->
+    <string-array name = "three_levels_hole_map">
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>1,1,1,0,0,1,1,1</item>
+        <item>0,1,1,1,1,1,1,0</item>
+        <item>1,1,1,1,1,1,1,1</item>
+        <item>1,1,1,1,1,1,1,1</item>
+    </string-array>
+
+</resources>

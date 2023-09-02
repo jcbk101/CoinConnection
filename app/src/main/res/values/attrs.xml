@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name = "Mother">
+        <attr name = "strokeColor" format = "color|integer" />
+        <attr name = "strokeLayers" format = "reference|string" />
+        <attr name = "strokeWidth" format = "dimension" />
+        <attr name = "text" format = "string" />
+
+        <attr name = "startColor" format = "color|integer" />
+        <attr name = "endColor" format = "color|integer" />
+        <attr name = "colorList" format = "reference" />
+        <attr name = "strokeColorList" format = "reference" />
+        <attr name = "gradientOrientation" format = "string">
+            <flag name = "vertical" value = "1" />
+            <flag name = "horizontal" value = "0" />
+        </attr>
+        <attr name = "gradient" format = "integer">
+            <flag name = "on" value = "1" />
+            <flag name = "off" value = "0" />
+        </attr>
+        <attr name = "isButton" format = "boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "ZoomImage" parent = "Mother">
+        <attr name = "zoomX" format = "float" />
+        <attr name = "zoomY" format = "float" />
+        <attr name = "positionX" format = "float" />
+        <attr name = "positionY" format = "float" />
+        <attr name = "centerImage" format = "boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "GridLayoutView" parent = "Mother">
+        <attr name = "android:columnCount" />
+        <attr name = "android:rowCount" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "CustomImageButton" parent = "Mother">
+        <attr name = "text" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "ImageEffect">
+        <attr name = "effect" format = "integer">
+            <flag name = "none" value = "0" />
+            <flag name = "blur" value = "1" />
+        </attr>
+        <attr name = "blur_radius" format = "float" />
+        <attr name = "srcCompat" />
+        <attr name = "color"/>
+        <attr name = "layer" format = "integer">
+            <flag name = "fg" value = "1" />
+            <flag name = "bg" value = "0" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name = "GradientTextView" parent = "Mother">
+        <attr name = "startColor" />
+        <attr name = "endColor" />
+        <attr name = "colorList" />
+        <attr name = "strokeColorList" />
+        <attr name = "strokeColor" />
+        <attr name = "strokeWidth" />
+        <attr name = "gradientOrientation" />
+        <attr name = "strokeLayers" />
+        <attr name = "gradient" />
+        <attr name = "isButton" />
+        <attr name = "drawableHeight" format = "dimension" />
+        <attr name = "drawableWidth" format = "dimension" />
+        <attr name = "underLineText" format = "boolean" />
+    </declare-styleable>
+
+    <declare-styleable name = "GradientButton" parent = "Mother">
+        <attr name = "startColor" />
+        <attr name = "endColor" />
+        <attr name = "colorList" />
+        <attr name = "strokeColorList" />
+        <attr name = "strokeColor" />
+        <attr name = "strokeWidth" />
+        <attr name = "gradientOrientation" />
+        <attr name = "gradient" />
+    </declare-styleable>
+
+    <declare-styleable name = "ImageTextView" parent = "Mother">
+        <attr name = "strokeColor" />
+        <attr name = "strokeWidth" />
+        <attr name = "srcCompat" format = "reference" />
+        <attr name = "srcCompatPadding" format = "dimension" />
+        <attr name = "srcCompatPaddingLeft" format = "dimension" />
+        <attr name = "srcCompatPaddingRight" format = "dimension" />
+        <attr name = "srcCompatPaddingTop" format = "dimension" />
+        <attr name = "srcCompatPaddingBottom" format = "dimension" />
+        <attr name = "drawableHeight" />
+        <attr name = "drawableWidth" />
+        <attr name = "isButton" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "ImageScroll" parent = "Mother">
+        <attr name = "startY" format = "integer" />
+        <attr name = "scrollingBg" format = "reference" />
+        <attr name = "scrollDirection" format = "integer">
+            <flag name = "up" value = "0" />
+            <flag name = "down" value = "1" />
+        </attr>
+        <attr name = "fitBottom" format = "boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "SlotReelView" parent = "Mother">
+        <attr name = "startY" />
+        <attr name = "reelImage" format = "reference" />
+        <attr name = "spinDirection" format = "integer">
+            <flag name = "up" value = "0" />
+            <flag name = "down" value = "1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name = "CustomSeekBar">
+        <attr name = "thumbHeight" format = "dimension" />
+        <attr name = "thumbWidth" format = "dimension" />
+    </declare-styleable>
+
+    <declare-styleable name = "StarsEarnedBar">
+        <attr name = "min" format = "integer" />
+        <attr name = "max" format = "integer" />
+        <attr name = "progress" format = "integer" />
+        <attr name = "progressDrawable" format = "reference" />
+        <attr name = "starPositions" format = "string" />
+        <attr name = "tickMarkOn" format = "reference" />
+        <attr name = "tickMarkOff" format = "reference" />
+        <attr name = "tickWidth" format = "dimension" />
+        <attr name = "tickHeight" format = "dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "BoardTile">
+        <!-- debug-->
+        <attr name = "specialList" format = "reference" />
+        <attr name = "xAdj" format = "dimension" />
+        <attr name = "yAdj" format = "dimension" />
+        <!-- debug-->
+
+        <attr name = "blockerList" format = "reference" />
+        <attr name = "blockerType" format = "integer">
+            <flag name = "stack" value = "1" />
+            <flag name = "shell" value = "2" />
+            <flag name = "rock" value = "3" />
+            <flag name = "ice" value = "4" />
+            <flag name = "chest" value = "5" />
+            <flag name = "glass_panel" value = "6" />
+        </attr>
+        <attr name = "sweeper" format = "integer">
+            <flag name = "vertical" value = "4" />
+            <flag name = "horizontal" value = "5" />
+            <flag name = "none" value = "-1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

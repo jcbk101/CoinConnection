@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/optionsLayout"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@android:color/black"
+        android:orientation = "vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/settingsBox"
+            android:layout_width = "@dimen/_220sdp"
+            android:layout_height = "@dimen/_200sdp"
+            android:background = "@drawable/box_b_orange"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+<!--
+        <View
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:background="@drawable/coin_pattern"
+                android:alpha=".5"
+                android:contentDescription = "@null"/>
+-->
+
+        <!--
+            //#################################
+            //
+            // Settings Text
+            //
+            //#################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/settingsText"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center"
+                android:text = "@string/settings_button_text"
+                android:textStyle="bold"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_26sdp"
+                app:layout_constraintBottom_toBottomOf = "@id/settingsBox"
+                app:layout_constraintEnd_toEndOf = "@id/settingsBox"
+                app:layout_constraintStart_toStartOf = "@id/settingsBox"
+                app:layout_constraintTop_toTopOf = "@id/settingsBox"
+                app:layout_constraintVertical_bias = ".05"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_4sdp"
+                app:textAllCaps = "true" />
+
+        <!--
+            //#################################
+            //
+            // Close button
+            //
+            //#################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/settingsDone"
+                android:layout_width = "@dimen/_64sdp"
+                android:layout_height = "@dimen/_24sdp"
+                android:background = "@drawable/button_long_red_a"
+                android:gravity = "center"
+                android:padding = "@dimen/_2sdp"
+                android:text = "@string/button_done"
+                android:fontFamily="@font/badaga"
+                android:textColor = "@color/buttonText"
+                android:textStyle = "bold"
+                app:textAllCaps="true"
+                app:isButton="true"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".5"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@id/hintCheckbox"
+                app:layout_constraintVertical_bias = "0"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <!--
+            //#################################
+            //
+            // Sound On/Off toggle
+            //
+            //#################################
+        -->
+        <androidx.appcompat.widget.SwitchCompat
+                android:id = "@+id/musicCheckbox"
+                android:layout_width = "@dimen/_20sdp"
+                android:layout_height = "@dimen/_20sdp"
+                android:layout_gravity = "center_vertical"
+                android:background = "@drawable/checkbox_states"
+                android:checked = "true"
+                android:fontFamily = "@font/badaga"
+                android:thumb = "@android:color/transparent"
+                android:track = "@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".1"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".32" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center_vertical"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_vertical"
+                android:padding = "@dimen/_4sdp"
+                android:text = "@string/music_sound_off"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@id/musicCheckbox"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@id/musicCheckbox"
+                app:layout_constraintTop_toTopOf = "@id/musicCheckbox"
+                app:strokeColor = "@color/popupBodyStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id = "@+id/sfxCheckbox"
+                android:layout_width = "@dimen/_20sdp"
+                android:layout_height = "@dimen/_20sdp"
+                android:layout_gravity = "center_vertical"
+                android:background = "@drawable/checkbox_states"
+                android:checked = "true"
+                android:thumb = "@android:color/transparent"
+                android:track = "@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".1"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".48" />
+
+        <!--
+            //#################################
+            //
+            // Music Volume
+            //
+            //#################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center_vertical"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_vertical"
+                android:padding = "@dimen/_4sdp"
+                android:text = "@string/sfx_sound_off"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@id/sfxCheckbox"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.0"
+                app:layout_constraintStart_toEndOf = "@id/sfxCheckbox"
+                app:layout_constraintTop_toTopOf = "@id/sfxCheckbox"
+                app:layout_constraintVertical_bias = "1.0"
+                app:strokeColor = "@color/popupBodyStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+        <ImageView
+                android:id = "@+id/musicNoteImage"
+                android:layout_width = "@dimen/_20sdp"
+                android:layout_height = "@dimen/_20sdp"
+                android:layout_gravity = "center_vertical"
+                android:layout_weight = ".15"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".1"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".64"
+                app:srcCompat = "@drawable/music_note_states"
+                android:contentDescription = "@null" />
+
+        <!--
+            //#################################
+            //
+            // Notifications
+            //
+            //#################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.CustomSeekBar
+                android:id = "@+id/volumeSeekBar"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_24sdp"
+                android:layout_gravity = "center_vertical"
+                android:enabled = "false"
+                android:max = "100"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:maxHeight = "@dimen/_10sdp"
+                android:progress = "0"
+                android:progressDrawable = "@drawable/seekbar_progress"
+                android:soundEffectsEnabled = "true"
+                android:thumb = "@drawable/dot_red"
+                app:layout_constraintBottom_toBottomOf = "@id/musicNoteImage"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0.0"
+                app:layout_constraintStart_toEndOf = "@id/musicNoteImage"
+                app:layout_constraintTop_toTopOf = "@id/musicNoteImage"
+                app:thumbHeight = "@dimen/_20sdp"
+                app:thumbWidth = "@dimen/_20sdp"
+                app:layout_constraintVertical_bias = "0.0"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id = "@+id/hintCheckbox"
+                android:layout_width = "@dimen/_20sdp"
+                android:layout_height = "@dimen/_20sdp"
+                android:layout_gravity = "center_vertical"
+                android:background = "@drawable/checkbox_states"
+                android:checked = "true"
+                android:fontFamily = "@font/badaga"
+                android:thumb = "@android:color/transparent"
+                android:track = "@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = ".1"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = ".8" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center_vertical"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center_vertical"
+                android:padding = "@dimen/_4sdp"
+                android:text = "@string/hint_system_off"
+                android:textColor = "@color/popupBodyColor"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@id/hintCheckbox"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@id/hintCheckbox"
+                app:layout_constraintTop_toTopOf = "@id/hintCheckbox"
+                app:strokeColor = "@color/popupBodyStroke"
+                app:strokeWidth = "@dimen/_3sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

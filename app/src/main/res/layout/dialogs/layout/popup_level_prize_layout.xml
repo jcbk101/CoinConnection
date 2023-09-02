@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/prizeFrame"
+            android:layout_width = "@dimen/_230sdp"
+            android:layout_height = "@dimen/_264sdp"
+            android:background = "@drawable/box_a_red"
+            android:clipChildren = "false"
+            android:clipToPadding = "false"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+        <ImageView
+                android:layout_width = "match_parent"
+                android:layout_height = "0dp"
+                android:alpha = ".25"
+                android:scaleType = "fitXY"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "W,1:1"
+                app:srcCompat = "@drawable/coin_pattern" />
+
+
+        <!--
+            //###########################
+            //
+            // Dividers
+            //
+            //###########################
+        -->
+        <ImageView
+                android:id = "@+id/separatorPrize"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_7sdp"
+                android:contentDescription = "@null"
+                android:paddingStart = "@dimen/_7sdp"
+                android:paddingEnd = "@dimen/_7sdp"
+                android:scaleType = "fitXY"
+                app:layout_constraintTop_toBottomOf = "@id/prizeHeader"
+                app:srcCompat = "@drawable/box_separator_c" />
+
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/prizeHeader"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "@dimen/_7sdp"
+                android:layout_marginEnd = "@dimen/_7sdp"
+                android:fontFamily = "@font/micross"
+                android:gravity = "center"
+                android:text = "@string/prize_header_text"
+                android:textColor = "@color/popupTitleColor"
+                android:textSize = "@dimen/_20ssp"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias = "0.05"
+                app:strokeColor = "@color/popupTitleStroke"
+                app:strokeWidth = "@dimen/_3sdp"
+                app:textAllCaps = "true" />
+
+
+        <!--
+            //###########################
+            //
+            // Requirements for prizes
+            //
+            //###########################
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id = "@+id/prizeInfoFrame"
+                android:layout_width = "match_parent"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_marginStart = "@dimen/_7sdp"
+                android:layout_marginTop = "@dimen/_2sdp"
+                android:layout_marginEnd = "@dimen/_7sdp"
+                android:clipChildren = "false"
+                android:clipToPadding = "false"
+                app:layout_constraintTop_toBottomOf = "@id/separatorPrize">
+
+
+            <!--
+                        <View
+                                android:layout_width = "match_parent"
+                                android:layout_height = "match_parent"
+                                android:scaleX="1.2"
+                                android:scaleY="1.8"
+                                android:alpha=".75"
+                                android:background="@drawable/glow_yellow"/>
+            -->
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/prizeText"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "@dimen/_2sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center"
+                    android:text = "@string/prize_msg_text"
+                    android:textColor = "@color/popupBodyColor"
+                    android:textSize = "@dimen/_16ssp"
+                    app:layout_constraintBottom_toTopOf = "@id/goldstarPrize"
+                    app:strokeColor = "@color/popupBodyStroke"
+                    app:strokeWidth = "@dimen/_3sdp" />
+
+
+            <View
+                    android:id = "@+id/goldstarPrize"
+                    android:layout_width = "@dimen/_16sdp"
+                    android:layout_height = "@dimen/_16sdp"
+                    android:layout_marginEnd = "@dimen/_7sdp"
+                    android:background = "@drawable/star_on"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@id/prizeStarCount"
+                    app:layout_constraintStart_toStartOf = "parent" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/prizeStarCount"
+                    android:layout_width = "@dimen/_56sdp"
+                    android:layout_height = "@dimen/_18sdp"
+                    android:drawablePadding = "@dimen/_2sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center_vertical"
+                    android:padding = "@dimen/_2sdp"
+                    android:textColor = "@color/popupBodyColor"
+                    android:textSize = "@dimen/_14ssp"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toStartOf = "@id/prizeLevelCount"
+                    app:layout_constraintStart_toEndOf = "@id/goldstarPrize"
+                    app:layout_constraintTop_toBottomOf = "@id/prizeText"
+                    app:strokeColor = "@color/popupBodyStroke"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "36/36" />
+
+            <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                    android:id = "@+id/prizeLevelCount"
+                    android:layout_width = "0dp"
+                    android:layout_height = "@dimen/_18sdp"
+                    android:fontFamily = "@font/badaga"
+                    android:gravity = "center_vertical"
+                    android:padding = "@dimen/_2sdp"
+                    android:textColor = "@color/popupBodyColor"
+                    android:textSize = "@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf = "parent"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toEndOf = "@id/prizeStarCount"
+                    app:layout_constraintTop_toBottomOf = "@id/prizeText"
+                    app:strokeColor = "@color/popupBodyStroke"
+                    app:strokeWidth = "@dimen/_3sdp"
+                    tools:text = "Levels: WWWW - WWWW" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--
+            //#################################
+            //
+            // Prize list
+            //
+            //#################################
+        -->
+        <LinearLayout
+                android:id = "@+id/listPrizeFrame"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_margin = "@dimen/_7sdp"
+                android:orientation = "vertical"
+                app:layout_constraintTop_toBottomOf = "@id/prizeInfoFrame">
+
+            <include layout = "@layout/prize_list_layout" />
+
+            <include layout = "@layout/prize_list_layout" />
+
+            <include layout = "@layout/prize_list_layout" />
+
+        </LinearLayout>
+
+
+        <!--
+            //#################################
+            //
+            // Close button
+            //
+            //#################################
+        -->
+        <com.genesyseast.coinconnection.CustomControls.GradientTextView
+                android:id = "@+id/prizeDone"
+                android:layout_width = "0dp"
+                android:layout_height = "@dimen/_28sdp"
+                android:layout_marginTop = "@dimen/_1sdp"
+                android:background = "@drawable/button_long_yellow_b"
+                android:fontFamily = "@font/badaga"
+                android:gravity = "center"
+                android:padding = "@dimen/_2sdp"
+                android:text = "@string/button_done"
+                android:textColor = "@color/buttonText"
+                android:textSize = "@dimen/_14ssp"
+                android:textStyle = "bold"
+                app:isButton = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "162:83"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_bias=".95"
+                app:strokeColor = "@color/buttonStroke"
+                app:strokeWidth = "@dimen/_2sdp"
+                app:textAllCaps = "true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

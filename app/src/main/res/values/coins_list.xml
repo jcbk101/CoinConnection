@@ -1,0 +1,320 @@
+<resources>
+
+
+    <!--
+    //################################
+    //
+    // Coins
+    //
+    //################################
+    -->
+    <integer-array name = "coin_icon_list">
+        <item>@drawable/coin_red</item>
+        <item>@drawable/coin_green</item>
+        <item>@drawable/coin_blue</item>
+        <!--        <item>@drawable/coin_purple</item>-->
+        <item>@drawable/coin_orange</item>
+
+        <item>@drawable/coin_pink</item>
+<!--        <item>@drawable/coin_teal</item>-->
+        <item>@drawable/coin_purple</item>
+        <item>@drawable/coin_gold</item>
+
+        <!-- ALL GEMS -->
+        <item>@drawable/jewel_purple</item>
+        <item>@drawable/jewel_pink</item>
+        <item>@drawable/jewel_teal</item>
+        <item>@drawable/jewel_yellow</item>
+
+        <!--
+                <item>@drawable/jewel_red</item>
+                <item>@drawable/jewel_green</item>
+                <item>@drawable/jewel_blue</item>
+                <item>@drawable/jewel_orange</item>
+                        <item>@drawable/jewel_purple</item>
+                        <item>@drawable/jewel_pink</item>
+                        <item>@drawable/jewel_teal</item>
+                        <item>@drawable/jewel_yellow</item>
+        -->
+
+        <!-- Lone specials coin -->
+        <!-- Other "added" specials will get a striped mask -->
+<!--        <item>@drawable/coin_rainbow</item>-->
+        <item>@drawable/bomb_booster_rainbow</item>
+
+        <!-- Special icons for animation purposes -->
+        <item>@drawable/bomb_on</item>
+        <item>@drawable/bolt_on</item>
+        <item>@drawable/star_on</item>
+        <item>@drawable/random_on</item>
+
+    </integer-array>
+
+
+    <integer-array name = "coin_bomb_list">
+        <item>@drawable/bomb_booster_red</item>
+        <item>@drawable/bomb_booster_green</item>
+        <item>@drawable/bomb_booster_blue</item>
+        <!--        <item>@drawable/bomb_booster_purple</item>-->
+        <item>@drawable/bomb_booster_orange</item>
+
+        <item>@drawable/bomb_booster_pink</item>
+<!--        <item>@drawable/bomb_booster_teal</item>-->
+        <item>@drawable/bomb_booster_purple</item>
+        <item>@drawable/bomb_booster_yellow</item>
+
+    </integer-array>
+
+    <integer-array name = "coin_bomb_glow">
+        <item>@drawable/bomb_booster_red_glow</item>
+        <item>@drawable/bomb_booster_green_glow</item>
+        <item>@drawable/bomb_booster_blue_glow</item>
+        <!--        <item>@drawable/bomb_booster_purple_glow</item>-->
+        <item>@drawable/bomb_booster_orange_glow</item>
+
+        <item>@drawable/bomb_booster_pink_glow</item>
+<!--        <item>@drawable/bomb_booster_teal_glow</item>-->
+        <item>@drawable/bomb_booster_purple_glow</item>
+        <item>@drawable/bomb_booster_yellow_glow</item>
+
+    </integer-array>
+
+    <!--
+    //################################
+    //
+    // Blockers
+    //
+    //################################
+    -->
+    <!-- Final -->
+    <integer-array name = "coin_stack">
+        <item>@drawable/coin_stack_red</item>
+        <item>@drawable/coin_stack_green</item>
+        <item>@drawable/coin_stack_blue</item>
+        <item>@drawable/coin_stack_orange</item>
+        <item>@drawable/coin_stack_pink</item>
+        <item>@drawable/coin_stack_purple</item>
+        <item>@drawable/coin_stack_gold</item>
+
+    </integer-array>
+
+    <!-- Final -->
+    <integer-array name = "ice_cubes">
+        <item>@drawable/ice_1</item>
+        <item>@drawable/ice_2</item>
+        <item>@drawable/ice_3</item>
+    </integer-array>
+
+    <!-- Final -->
+    <integer-array name = "glass_panel">
+        <item>@drawable/blocker_glass_1</item>
+        <item>@drawable/blocker_glass_2</item>
+        <item>@drawable/blocker_glass_3</item>
+        <item>@drawable/blocker_glass_4</item>
+    </integer-array>
+
+
+    <!-- Final -->
+    <integer-array name = "barrel_blocker">
+        <item>@drawable/barrel_00</item>
+        <item>@drawable/barrel_01</item>
+    </integer-array>
+
+
+    <!-- Final -->
+    <integer-array name = "chest_blocker">
+        <item>@drawable/chest_blocker_closed</item>
+        <item>@drawable/chest_blocker_empty</item>
+        <item>@drawable/chest_blocker_full</item>
+    </integer-array>
+
+
+    <!--
+    //################################
+    //
+    // Glowing Coins
+    //
+    //################################
+    -->
+    <integer-array name = "coin_glow_list">
+        <item>@drawable/coin_red_glow</item>
+        <item>@drawable/coin_green_glow</item>
+        <item>@drawable/coin_blue_glow</item>
+
+        <item>@drawable/coin_orange_glow</item>
+        <!--        <item>@drawable/coin_purple_glow</item>-->
+
+        <item>@drawable/coin_pink_glow</item>
+<!--        <item>@drawable/coin_teal_glow</item>-->
+        <item>@drawable/coin_purple_glow</item>
+        <item>@drawable/coin_gold_glow</item>
+
+        <!-- ALL GEMS -->
+        <item>@drawable/jewel_purple</item>
+        <item>@drawable/jewel_pink</item>
+        <item>@drawable/jewel_teal</item>
+        <item>@drawable/jewel_yellow</item>
+
+        <!-- Lone specials coin -->
+        <!-- Other "added" specials will get a striped mask -->
+<!--        <item>@drawable/coin_rainbow_glow</item>-->
+        <item>@drawable/bomb_booster_rainbow_glow</item>
+
+        <!--  Specials -->
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+
+
+    <!--
+    //################################
+    //
+    // Coin Particles
+    //
+    //################################
+    -->
+    <integer-array name = "coin_particles">
+        <item>@drawable/particle_red</item>
+        <item>@drawable/particle_green</item>
+        <item>@drawable/particle_blue</item>
+
+        <item>@drawable/particle_orange</item>
+        <!--        <item>@drawable/particle_purple</item>-->
+
+        <item>@drawable/particle_pink</item>
+<!--        <item>@drawable/particle_teal</item>-->
+                <item>@drawable/particle_purple</item>
+        <item>@drawable/particle_gold</item>
+
+        <!-- ALL GEMS -->
+        <item>@drawable/particle_gem_purple</item>
+        <item>@drawable/particle_gem_pink</item>
+        <item>@drawable/particle_gem_teal</item>
+        <item>@drawable/particle_gem_yellow</item>
+
+        <!-- Lone specials coin -->
+        <!-- Other "added" specials will get a striped mask -->
+        <item>@drawable/coin_rainbow_glow</item>
+
+        <!--  Specials -->
+        <item>@drawable/particle_special</item>
+        <item>@drawable/particle_special</item>
+        <item>@drawable/particle_special</item>
+        <item>@drawable/particle_special</item>
+
+    </integer-array>
+
+
+    <!--
+    //################################
+    //
+    // Coin Particles
+    //
+    //################################
+    -->
+    <integer-array name = "glass_particles">
+        <item>@drawable/glass_particles_01</item>
+        <item>@drawable/glass_particles_02</item>
+        <item>@drawable/glass_particles_03</item>
+        <item>@drawable/glass_particles_04</item>
+        <item>@drawable/glass_particles_05</item>
+        <item>@drawable/glass_particles_06</item>
+        <item>@drawable/glass_particles_07</item>
+        <item>@drawable/glass_particles_08</item>
+        <item>@drawable/glass_particles_09</item>
+        <item>@drawable/glass_particles_10</item>
+        <item>@drawable/glass_particles_11</item>
+        <item>@drawable/glass_particles_12</item>
+    </integer-array>
+
+    <integer-array name = "ice_particles">
+        <item>@drawable/glass_particles_01</item>
+        <item>@drawable/glass_particles_02</item>
+        <item>@drawable/glass_particles_03</item>
+        <item>@drawable/glass_particles_04</item>
+        <item>@drawable/glass_particles_05</item>
+        <item>@drawable/glass_particles_06</item>
+        <item>@drawable/glass_particles_07</item>
+        <item>@drawable/glass_particles_08</item>
+        <item>@drawable/glass_particles_09</item>
+        <item>@drawable/glass_particles_10</item>
+        <item>@drawable/glass_particles_11</item>
+        <item>@drawable/glass_particles_12</item>
+    </integer-array>
+
+    <integer-array name = "rock_particles">
+        <item>@drawable/rock_particles_01</item>
+        <item>@drawable/rock_particles_02</item>
+        <item>@drawable/rock_particles_03</item>
+        <item>@drawable/rock_particles_04</item>
+        <item>@drawable/rock_particles_05</item>
+        <item>@drawable/rock_particles_06</item>
+        <item>@drawable/rock_particles_07</item>
+        <item>@drawable/rock_particles_08</item>
+        <item>@drawable/rock_particles_09</item>
+        <item>@drawable/rock_particles_10</item>
+        <item>@drawable/rock_particles_11</item>
+        <item>@drawable/rock_particles_12</item>
+    </integer-array>
+
+    <integer-array name = "shell_particles">
+        <item>@drawable/shell_particles_01</item>
+        <item>@drawable/shell_particles_02</item>
+        <item>@drawable/shell_particles_03</item>
+        <item>@drawable/shell_particles_04</item>
+        <item>@drawable/shell_particles_05</item>
+        <item>@drawable/shell_particles_06</item>
+        <item>@drawable/shell_particles_07</item>
+        <item>@drawable/shell_particles_08</item>
+        <item>@drawable/shell_particles_09</item>
+        <item>@drawable/shell_particles_10</item>
+        <item>@drawable/shell_particles_11</item>
+        <item>@drawable/shell_particles_12</item>
+    </integer-array>
+
+
+    <integer-array name = "barrel_particles">
+        <item>@drawable/barrel_01</item>
+        <item>@drawable/barrel_02</item>
+        <item>@drawable/barrel_03</item>
+        <item>@drawable/barrel_04</item>
+        <item>@drawable/barrel_05</item>
+        <item>@drawable/barrel_06</item>
+        <item>@drawable/barrel_07</item>
+    </integer-array>
+
+
+    <!--
+    //################################
+    //
+    // Cards
+    //
+    //################################
+    -->
+    <integer-array name = "card_icon_list">
+        <item>@drawable/card_coin_red</item>
+        <item>@drawable/card_coin_green</item>
+        <item>@drawable/card_coin_blue</item>
+
+        <item>@drawable/card_coin_orange</item>
+        <!--        <item>@drawable/card_coin_purple</item>-->
+
+        <item>@drawable/card_coin_pink</item>
+        <item>@drawable/card_coin_teal</item>
+        <item>@drawable/card_coin_gold</item>
+        <!-- ALL GEMS -->
+        <item>@drawable/card_jewel_red</item>
+        <item>@drawable/card_jewel_pink</item>
+        <item>@drawable/card_jewel_blue</item>
+        <item>@drawable/card_jewel_orange</item>
+
+        <!-- ALL SPECIAL CARDS -->
+        <item>@drawable/card_questionmark</item>
+        <item>@drawable/card_back</item>
+        <item>@drawable/card_emoji_sad</item>
+        <item>@drawable/card_hint_glass_gold</item>
+        <item>@drawable/card_free_moves_gold</item>
+    </integer-array>
+
+</resources>

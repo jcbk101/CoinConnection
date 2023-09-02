@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name = "game_start_efx">
+        <item>@raw/bomb_expand</item>
+        <item>@raw/bomb_special</item>
+        <item>@raw/button_click</item>
+        <item>@raw/charge_beam_part_1</item>
+        <item>@raw/charge_beam_part_2</item>
+        <item>@raw/charge_beam_special</item>
+        <item>@raw/coin</item>
+        <item>@raw/coin_match</item>
+        <item>@raw/coin_reverse</item>
+        <item>@raw/dialog_click</item>
+        <item>@raw/error</item>
+        <item>@raw/invalid</item>
+        <item>@raw/level_complete_part_1</item>
+        <item>@raw/level_complete_part_2</item>
+        <item>@raw/level_fail</item>
+        <item>@raw/level_select</item>
+        <item>@raw/lightning_special</item>
+        <item>@raw/logo_reveal</item>
+        <item>@raw/pause_game</item>
+        <item>@raw/points_add</item>
+        <item>@raw/points_add_loop</item>
+        <item>@raw/pop</item>
+        <item>@raw/quit_game</item>
+        <item>@raw/random_special</item>
+        <item>@raw/reel_stop_1</item>
+        <item>@raw/reel_stop_2</item>
+        <item>@raw/reel_stop_win_3</item>
+        <item>@raw/slot_arm</item>
+        <item>@raw/slots_free_spins</item>
+        <item>@raw/slots_lose_game</item>
+        <item>@raw/slots_prize_add</item>
+        <item>@raw/slots_reel_tick</item>
+        <item>@raw/slots_win_game</item>
+        <item>@raw/spark_special</item>
+        <item>@raw/special_created</item>
+        <item>@raw/special_matched</item>
+        <item>@raw/special_touch</item>
+        <item>@raw/star_level_up</item>
+        <item>@raw/star_shoot</item>
+        <item>@raw/start_game</item>
+        <item>@raw/toast_alert</item>
+        <item>@raw/unpause_game</item>
+    </integer-array>
+
+    <!--        <item>@raw/beach_bg_swinging_sweet</item>-->
+    <!-- Themed BG songs are in order of BG files -->
+    <integer-array name = "game_music">
+        <item>@raw/beach_bg_black_diamond</item>
+        <item>@raw/fairytale_bg_sleep_talking</item>
+        <item>@raw/forest_bg_mysterious_ambience_song21</item>
+        <item>@raw/halloween_bg_creep</item>
+        <item>@raw/nighttime_bg_emotional_deluge</item>
+        <item>@raw/ocean_bg_blue_meadow_in_green_sky</item>
+        <item>@raw/winter_bg_next_to_you</item>
+        <!-- Menu and Casino -->
+        <item>@raw/game_complete_bg_happy_adveture</item>
+        <item>@raw/menu_bg_gone_fishin_by_memoraphile</item>
+        <item>@raw/slots_bg_somewhere_in_the_elevator</item>
+    </integer-array>
+</resources>

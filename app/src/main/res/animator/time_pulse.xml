@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:ordering = "sequentially">
+
+    <set android:ordering = "together">
+        <objectAnimator
+                android:duration = "200"
+                android:interpolator = "@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName = "scaleX"
+                android:valueFrom = "1"
+                android:valueTo = "1.4" />
+        <objectAnimator
+                android:duration = "200"
+                android:interpolator = "@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName = "scaleY"
+                android:valueFrom = "1"
+                android:valueTo = "1.4" />
+
+        <objectAnimator
+                android:duration = "100"
+                android:propertyName = "textColor"
+                android:valueFrom = "#FFFFFF"
+                android:valueTo = "#FF0000"
+                android:valueType = "intType" />
+    </set>
+
+    <set android:ordering = "together">
+        <objectAnimator
+                android:duration = "200"
+                android:interpolator = "@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName = "scaleX"
+                android:valueFrom = "1.4"
+                android:valueTo = "1" />
+        <objectAnimator
+                android:duration = "200"
+                android:interpolator = "@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName = "scaleY"
+                android:valueFrom = "1.4"
+                android:valueTo = "1" />
+
+        <objectAnimator
+                android:duration = "100"
+                android:propertyName = "textColor"
+                android:valueFrom = "#FF0000"
+                android:valueTo = "#FFFFFF"
+                android:valueType = "intType" />
+    </set>
+
+</set>

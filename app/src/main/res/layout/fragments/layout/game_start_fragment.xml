@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:id = "@+id/staticPage"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "#FF6eb9fb">
+
+
+    <!--
+        //##################################
+        //
+        // Static Overlay: Coin outline
+        //
+        //##################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.ImageScroll
+            android:id = "@+id/bgScroller"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:alpha = ".75"
+            android:visibility = "invisible"
+            app:scrollDirection = "up"
+            app:scrollingBg = "@drawable/wave_scroll" />
+
+    <View
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:background = "@drawable/cloud_bg_full" />
+
+
+    <View
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:background = "@drawable/purple_mask" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:layout_width = "match_parent"
+            android:layout_height = "0dp"
+            android:alpha = ".5"
+            android:contentDescription = "@null"
+            android:scaleType = "fitXY"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "W,518:480"
+            app:srcCompat = "@drawable/outline_connected" />
+
+
+    <!--
+        //##################################
+        //
+        // Let the sunshine in
+        //
+        //##################################
+    -->
+    <ImageView
+            android:id = "@+id/sunShine"
+            android:layout_width = "@dimen/_200sdp"
+            android:layout_height = "@dimen/_200sdp"
+            android:background = "@drawable/small_star_burst"
+            android:contentDescription = "@null"
+            android:scaleType = "fitXY"
+            android:translationY="@dimen/_minus15sdp"
+            android:translationX="@dimen/_minus15sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/mainTitle"
+            app:layout_constraintEnd_toEndOf="@id/mainTitle"
+            app:layout_constraintBottom_toBottomOf = "@id/mainTitle"
+            app:layout_constraintTop_toTopOf = "@id/mainTitle"
+            app:srcCompat = "@drawable/small_star_burst" />
+
+
+    <!--
+        //##################################
+        //
+        // Close button
+        //
+        //##################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/exitButton"
+            android:layout_width = "@dimen/_24sdp"
+            android:layout_height = "@dimen/_24sdp"
+            android:background = "@drawable/gold_x"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".98"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".02" />
+
+
+    <!--
+        //##################################
+        //
+        // Title
+        //
+        //##################################
+    -->
+
+    <View
+            android:id = "@+id/titleSparkle"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:background = "@drawable/sparkle"
+            android:translationX = "@dimen/_2sdp"
+            android:translationY = "@dimen/_minus1sdp"
+            app:layout_constraintBottom_toBottomOf = "@id/mainTitle"
+            app:layout_constraintEnd_toEndOf = "@id/mainTitle"
+            app:layout_constraintHorizontal_bias = "1"
+            app:layout_constraintStart_toStartOf = "@id/mainTitle"
+            app:layout_constraintTop_toTopOf = "@id/mainTitle"
+            app:layout_constraintVertical_bias = "0" />
+
+    <ImageView
+            android:id = "@+id/mainTitle"
+            android:layout_width = "@dimen/_220sdp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/coin_connection_title"
+            android:contentDescription = "@null"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:textColor = "@android:color/white"
+            android:textSize = "@dimen/_54sdp"
+            android:visibility = "invisible"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "502:295"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.513"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.097"
+            tools:visibility = "visible" />
+
+
+    <!--
+        //###############################
+        //
+        // Main Menu buttons
+        //
+        //###############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/playResumeButton"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginBottom = "@dimen/_8sdp"
+            android:background = "@drawable/button_long_purple_a"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/resume_button_text"
+            android:textColor = "@color/buttonText"
+            android:textSize = "@dimen/_18ssp"
+            android:visibility = "gone"
+            app:isButton = "true"
+            app:layout_constraintBottom_toTopOf = "@id/playButton"
+            app:layout_constraintDimensionRatio = "3:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = ".5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:strokeColor = "@color/buttonStroke"
+            app:strokeWidth = "@dimen/_3sdp"
+            app:textAllCaps = "true"
+            tools:visibility = "visible" />
+
+
+    <!--
+        //##################################
+        //
+        // Title
+        //
+        //##################################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/playButton"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginBottom = "@dimen/_8sdp"
+            android:background = "@drawable/button_long_red_a"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/play_button_text"
+            android:textColor = "@color/buttonText"
+            android:textSize = "@dimen/_18ssp"
+            app:isButton = "true"
+            app:layout_constraintBottom_toTopOf = "@id/settingsButton"
+            app:layout_constraintDimensionRatio = "3:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:strokeColor = "@color/buttonStroke"
+            app:strokeWidth = "@dimen/_3sdp"
+            app:textAllCaps = "true" />
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/settingsButton"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginBottom = "@dimen/_8sdp"
+            android:background = "@drawable/button_long_orange_a"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/settings_button_text"
+            android:textColor = "@color/buttonText"
+            android:textSize = "@dimen/_18ssp"
+            android:typeface = "normal"
+            app:isButton = "true"
+            app:layout_constraintBottom_toTopOf = "@id/aboutApp"
+            app:layout_constraintDimensionRatio = "3:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:strokeColor = "@color/buttonStroke"
+            app:strokeWidth = "@dimen/_3sdp"
+            app:textAllCaps = "true" />
+
+
+    <com.genesyseast.coinconnection.CustomControls.GradientTextView
+            android:id = "@+id/aboutApp"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/_40sdp"
+            android:background = "@drawable/button_long_green_a"
+            android:fontFamily = "@font/badaga"
+            android:gravity = "center"
+            android:text = "@string/about_text"
+            android:textColor = "@color/buttonText"
+            android:textSize = "@dimen/_18ssp"
+            android:typeface = "normal"
+            app:isButton = "true"
+            app:layout_constraintBottom_toTopOf = "@id/webpageButton"
+            app:layout_constraintDimensionRatio = "3:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".95"
+            app:strokeColor = "@color/buttonStroke"
+            app:strokeWidth = "@dimen/_3sdp"
+            app:textAllCaps = "true" />
+
+    <!--
+        //###############################
+        //
+        // Bottom Buttons
+        //
+        //###############################
+    -->
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/rateMe"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginEnd = "@dimen/_4sdp"
+            android:background = "@drawable/button_square_purple_a"
+            android:padding = "@dimen/_4sdp"
+            android:scaleType = "fitCenter"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "@id/webpageButton"
+            app:layout_constraintEnd_toStartOf = "@+id/emailButton"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toStartOf = "@id/mainTitle"
+            app:layout_constraintTop_toBottomOf = "@id/aboutApp"
+            app:layout_constraintTop_toTopOf = "@id/webpageButton"
+            app:srcCompat = "@drawable/thumbs_up" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/emailButton"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginEnd = "@dimen/_4sdp"
+            android:background = "@drawable/button_square_purple_a"
+            android:padding = "@dimen/_4sdp"
+            android:scaleType = "fitCenter"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "@id/webpageButton"
+            app:layout_constraintEnd_toStartOf = "@+id/webpageButton"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@+id/rateMe"
+            app:layout_constraintTop_toTopOf = "@id/webpageButton"
+            app:srcCompat = "@drawable/mail_back_gold" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/webpageButton"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginEnd = "@dimen/_4sdp"
+            android:background = "@drawable/button_square_purple_a"
+            android:padding = "@dimen/_4sdp"
+            android:scaleType = "fitCenter"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@+id/devApps"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@+id/emailButton"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = ".95"
+            app:srcCompat = "@drawable/www" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/devApps"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:layout_marginEnd = "@dimen/_4sdp"
+            android:background = "@drawable/button_square_purple_a"
+            android:padding = "@dimen/_4sdp"
+            android:scaleType = "fitCenter"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "@id/webpageButton"
+            app:layout_constraintEnd_toStartOf = "@id/socialMedia"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@+id/webpageButton"
+            app:layout_constraintTop_toTopOf = "@id/webpageButton"
+            app:srcCompat = "@drawable/game_pad" />
+
+    <com.genesyseast.coinconnection.CustomControls.ImageTextView
+            android:id = "@+id/socialMedia"
+            android:layout_width = "@dimen/_40sdp"
+            android:layout_height = "@dimen/_40sdp"
+            android:background = "@drawable/button_square_purple_a"
+            android:padding = "@dimen/_4sdp"
+            android:scaleType = "fitCenter"
+            app:isButton = "true"
+            app:layout_constraintBottom_toBottomOf = "@id/webpageButton"
+            app:layout_constraintEnd_toEndOf = "@id/mainTitle"
+            app:layout_constraintHorizontal_bias = "0.5"
+            app:layout_constraintStart_toEndOf = "@+id/devApps"
+            app:layout_constraintTop_toTopOf = "@id/webpageButton"
+            app:srcCompat = "@drawable/fb_f" />
+
+
+    <ImageView
+            android:id="@+id/blurStartScreen"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
