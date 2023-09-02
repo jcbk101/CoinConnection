@@ -126,7 +126,7 @@
         //
         //#############################
         -->
-        <!--tools:text = "This is a stupid ass error message test. This is a stupid ass error message test"-->
+        <!--tools:text = "This is an error message test. This is an error message test"-->
 
 
         <!--
@@ -151,7 +151,7 @@
                 app:layout_constraintVertical_bias = "0.0"
                 app:strokeColor = "#FF00007F"
                 app:strokeWidth = "@dimen/_2sdp"
-                tools:text = "This is a stupid ass test. Do the dumb ass test you piece of dog feces! Don't bother me anymore with your nonsense either!" />
+                tools:text = "This is a test. Perform the test you piece of dog feces! Don't bother me anymore with your nonsense either!" />
 
         <com.genesyseast.coinconnection.CustomControls.GradientTextView
                 android:id = "@+id/errorButtonCancel"

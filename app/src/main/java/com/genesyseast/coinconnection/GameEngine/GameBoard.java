@@ -365,7 +365,7 @@ public class GameBoard
         // Get the max colors we can use
         //
         //##############################
-        // TODO fix all this shit!
+        // TODO fix all this!
         maxColors = xmlMapColors[ index % xmlMapColors.length ];
         
         // Sometimes, we don't want gems

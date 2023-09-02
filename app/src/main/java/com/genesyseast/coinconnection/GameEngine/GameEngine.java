@@ -386,7 +386,7 @@ public class GameEngine
             editor.putBoolean( "got_skrilla", noMoreAds );
             
             
-            //Remove old shit
+            //Remove old stuff
             editor.remove( "high_scores" );
             editor.remove( "specials_capacity" );
             editor.remove( "upgrade_days_to_wait" );
