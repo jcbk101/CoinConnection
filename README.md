@@ -1,2 +1,2 @@
 # CoinConnection
- Unrelease version of CoinConnection
+ Unreleased version of CoinConnection
